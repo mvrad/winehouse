@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  header.header-home.header.header-content__home
+    #collection-sm
+    //- Code goes here
+    #collection-lg
+      .collection-container-lg
+        .left-panel
+          h2 My Collection
+          .collection-main
+
+        .right-panel
+          h2 Wine Search
+          form#search-form
+            input.form-control(type="search" id="search" name="search" placeholder="Search millions of wines")
+          .search-dropdown
+            ul.search-dropdown-list
+              //- li.search-dropdown-list__image
+              li.search-dropdown-list__name
+              li.search-dropdown-list__varietal
+              li.search-dropdown-list__vintage
+              li.search-dropdown-list__type
+              li.search-dropdown-list__price

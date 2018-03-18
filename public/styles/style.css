@@ -1,0 +1,416 @@
+/* Base Styles */
+
+.header-home {
+  background: linear-gradient(rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)),
+  url("../images/main.jpg") no-repeat center/auto;
+  height: 200vh;
+  position: relative;
+  align-items: center;
+}
+
+.header {
+  width: auto;
+  text-align: center;
+
+  margin-top: -295px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#register-home {
+  height: 200vh;
+}
+
+/* Typography */
+
+h1 {
+  font-family: "Fira Sans Extra Condensed", sans-serif;
+  font-size: 2.8em;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000;
+  margin-top: 240px;
+}
+
+h2, p, label, input, button, .search-dropdown {
+  font-family: "Fira Sans", sans-serif;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+  margin: 40px 0;
+}
+
+p {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+  margin: 40px 0;
+}
+
+#main-title-sm, .title, .title-raised {
+  display: block;
+  padding-top: 100px;
+  margin-top: 0;
+}
+
+#main-title-lg {
+  display: none;
+}
+
+/* Containers */
+
+.main-container {
+  margin: 0 20px;
+}
+
+/* Images */
+
+#wino-logo-sm {
+  width: 140px;
+  height: auto;
+  float: left;
+  margin: 15px;
+}
+
+/* Nav */
+
+#navbar-sm {
+  display: flow-root;
+  background-color: #fff;
+  width: 100%;
+  height: 60px;
+}
+
+.mobile-menu__dropdown {
+  background-color: #fff;
+  width: 100%;
+  height: 295px;
+  text-align: center;
+}
+
+.mobile-menu__dropdown a {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.45em;
+  color: #000;
+  text-transform: uppercase;
+
+  margin: 0 auto;
+}
+
+.mobile-menu__dropdown li:first-child {
+  padding-top: 40px;
+}
+
+.mobile-menu__dropdown li:last-child {
+  padding-bottom: 0;
+}
+
+.mobile-menu__dropdown li {
+  text-align: center;
+
+  padding: 15px;
+}
+
+.dropdown-open {
+  height: 100vh;
+  margin-top: 0;
+}
+
+#navbar-lg {
+  display: none;
+}
+
+/* Modules */
+
+#hamburger {
+  cursor: auto;
+  outline: 0;
+  float: right;
+  padding: 0;
+  margin: 18px;
+}
+
+#register-btn {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  height: auto;
+  color: #fff;
+  background-color: #1e90ff;
+  border-radius: 10px;
+  outline: none;
+
+  padding: 10px 15px;
+  margin: 20px 0 100px;
+}
+
+/* Registration Form */
+
+.form-group {
+  max-width: 228px;
+  margin: 0 auto;
+}
+
+label, input {
+  font-size: 1.125em;
+  font-weight: 400;
+  float: left;
+}
+
+label {
+  color: #fff;
+  padding: 20px 0 5px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+input {
+  width: 228px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#signup-btn, #login-btn {
+  font-size: 1.125em;
+  font-weight: 400;
+  color: #fff;
+  background-color: #1e90ff;
+  border: none;
+  outline: none;
+  width: 100%;
+  float: left;
+  padding: 10px;
+}
+
+#signup-btn {
+  margin: 20px 0 100px;
+}
+
+#login-btn {
+  margin: 20px 0;
+}
+
+/* Collection */
+
+#collection-sm {
+  display: block;
+}
+
+#collection-lg {
+  display: none;
+}
+
+/* Breakpoints */
+
+@media (min-width: 824px) {
+
+  /* Base Styles */
+
+  .header-home, #register-home {
+    background-size: cover;
+    height: calc(100vh - 60px);
+    margin: 0;
+  }
+
+  /* Nav */
+
+  #navbar-sm {
+    display: none;
+  }
+
+  .mobile-menu__dropdown {
+    display: none;
+  }
+
+  #navbar-lg {
+    display: block;
+  }
+
+  /* Typography */
+
+  h1 {
+    font-family: "Fira Sans Extra Condensed", sans-serif;
+    font-size: 3.2em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .item a {
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #000;
+    padding: 20px 15px;
+  }
+
+  a:hover {
+    background-color: #808080;
+    color: #fff;
+  }
+
+  #main-title-sm {
+    display: none;
+  }
+  
+  #main-title-lg {
+    font-size: 5rem;
+    display: block;
+    padding: 240px 0 20px;
+    margin: 0 auto;
+  }
+
+  .title {
+    padding-top: 240px;
+  }
+
+  .title-raised {
+    display: block;
+    padding-top: 100px;
+    padding-top: 100px;
+    margin-top: 0;
+  }
+
+  #about {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* Nav Bar */
+
+  nav {
+    background: #fff;
+    height: 60px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: none;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin: 0 15%;
+  }
+
+  .flex-grow {
+    flex-grow: 1;
+  }
+
+  /* Images */
+
+  #wino-logo {
+    width: 160px;
+  }
+
+  /* Modules */
+
+  #register-btn:hover {
+    cursor: pointer;
+    filter: brightness(75%);
+  }
+
+  /* Registration Form */
+
+  #signup-btn, #login-btn {
+    margin-bottom: 0;
+  }
+
+  #signup-btn:hover, #login-btn:hover {
+    cursor: pointer;
+    filter: brightness(75%);
+  }
+
+  /* Collection */
+
+  #collection-sm {
+    display: none;
+  }
+
+  #collection-lg {
+    display: block;
+  }
+
+  .collection-container-lg {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "sidebar main";
+  }
+  
+  .left-panel {
+    background: #fff url("../images/collection.jpg") no-repeat center/cover;
+    border: 10px solid #000;
+    height: calc(100vh - 60px);
+  }
+  
+  .left-panel h2, .right-panel h2 {
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  .right-panel h2 {
+    padding-top: 10px;
+  }
+
+  .collection-main {
+    border-top: 10px solid #000;
+  }
+
+  #search-form {
+    width: 300px;
+    margin: 40px auto 0;
+  }
+
+  #search-form input {
+    margin-top: 20px;
+    float: none;
+  }
+
+  .search-dropdown {
+    display: none;
+    width: 500px;
+    height: auto;
+    font-size: 1.125em;
+    font-weight: 400;
+    color: #000;
+    text-align: left;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+
+  .is-active {
+    display: block;
+  }
+
+  .search-dropdown-list li {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .labels {
+    font-weight: 700;
+  }
+
+  /* .search-dropdown-list__image {
+    text-align: center;
+  }
+
+  .search-dropdown-list__image img {
+    width: 200px;
+    height: auto;
+  } */
+}

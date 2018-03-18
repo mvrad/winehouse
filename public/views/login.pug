@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  header.header-home.header.header-content__home
+    h1.title Sign In
+    .main-container
+
+      //- Login Form
+      form(method="POST" action="/login")
+        #login-email.form-group
+          label(for="email") Email
+          br
+          input.form-control(type="text" id="email" name="email")
+        .form-group
+          label(for="password") Password
+          br
+          input.form-control(type="password" id="password" name="password")
+        .form-group
+          button#login-btn.btn(type="submit") Sign In

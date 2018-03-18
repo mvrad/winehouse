@@ -1,0 +1,26 @@
+doctype html(lang="en")
+
+head
+  meta(charset="utf-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+  meta(http-equiv="x-ua-compatible", content="ie=edge")
+  title Wino | #{title}
+
+  link(href="/styles/base.css", rel="stylesheet")
+  link(href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Fira+Sans:300,400,700" rel="stylesheet")  
+  link(href="/styles/hamburgers.min.css", rel="stylesheet")
+  link(href="/styles/style.css", rel="stylesheet")
+
+  body
+    //- load navbar
+    include navbar
+
+    //- content block
+    block content
+
+    //- load footer
+    //- p.footer Copyright &copy; 2018 Matthew Conrad.
+  
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+  script(src="/scripts/config.js")
+  script(src="/scripts/script.js")

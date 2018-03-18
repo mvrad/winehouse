@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  header#register-home.header-home.header.header-content__home
+    h1.title-raised Sign Up
+    .main-container
+
+      //- Registration Form
+      form(method="POST" action="/register")
+        .form-group
+          label(for="name") Name
+          br
+          input#name.form-control(type="text", placeholder="Jane Doe" name="name")
+        .form-group
+          label(for="email") Email
+          br
+          input#email.form-control(type="email", placeholder="janedoe@example.com" name="email")
+        .form-group
+          label(for="favoriteBook") Favorite Wine
+          br
+          input#favoriteWine.form-control(type="text", placeholder="Cain Five 2012" name="favoriteWine")
+        .form-group
+          label(for="pw") Password
+          br
+          input#pw.form-control(type="password" name="password")
+        .form-group
+          label(for="pw2") Confirm Password
+          br
+          input#pw2.form-control(type="password" name="confirmPassword")
+          br
+        .form-group
+          button#signup-btn(type="submit") Create My Free Account
