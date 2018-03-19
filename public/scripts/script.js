@@ -2,7 +2,7 @@ $(() => {
 
   "use strict";
 
-  const akey = "3w25yd5xj28ih8u0qpj0g83tg5c5op06m20xzc9vvqol8xq8",
+  const akey = config.KEY,
     snoothAPI = "https://api.snooth.com/wines/?akey=" + akey + "&q=";
 
   // Hamburger menu animation
