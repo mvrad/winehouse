@@ -38,7 +38,8 @@ h1 {
   margin-top: 240px;
 }
 
-h2, p, label, input, button, textarea, .search-dropdown {
+h2, p, label, input, button, textarea, .search-dropdown,
+.collection-wine span {
   font-family: "Fira Sans", sans-serif;
 }
 
@@ -182,7 +183,7 @@ input {
   padding: 10px;
 }
 
-#signup-btn, #login-btn {
+#signup-btn, #login-btn, #add-to-collection {
   font-size: 1.125em;
   font-weight: 400;
   color: #fff;
@@ -318,7 +319,10 @@ input {
 
   /* Modules */
 
-  #register-btn:hover {
+  #register-btn:hover,
+  #signup-btn:hover,
+  #login-btn:hover,
+  #add-to-collection:hover {
     cursor: pointer;
     filter: brightness(75%);
   }
@@ -327,11 +331,6 @@ input {
 
   #signup-btn, #login-btn {
     margin-bottom: 0;
-  }
-
-  #signup-btn:hover, #login-btn:hover {
-    cursor: pointer;
-    filter: brightness(75%);
   }
 
   /* Collection */
@@ -372,6 +371,51 @@ input {
 
   .collection-main {
     border-top: 10px solid #000;
+  }
+
+  .collection-wine {
+    background-color: #fff;
+    border-bottom: solid 2px #000;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    margin: 0;
+  }
+
+  .collection-wine span, .wine-delete {
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+  }
+
+  .wine-glass {
+    width: 46px;
+    height: auto;
+  }
+
+  .collection-wine span {
+    font-size: 1.3em;
+  }
+
+  .wine-name, .wine-type {
+    width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .wine-note {
+    width: 28px;
+    height: auto;
+  }
+
+  .wine-delete {
+    font-weight: 700;
+    font-size: 2.35em;
   }
 
   #search-form {

@@ -51,6 +51,15 @@ $(() => {
             $(".search-dropdown-list__type").html(type);
             $(".search-dropdown-list__price").html(price);
             // $(".search-dropdown-list__image").html(newLink);
+
+            // $("#add-to-collection").click(() => {
+            //   $(".collection-main").after(".collection-wine");
+            //   if ($(".collection-main").after(".collection-wine")) {
+            //     $(".collection-wine").after(".wine-name").html("<span>Malbec</span>");
+            //     // $("wine-type").append(varietal);
+            //     // $("wine-year").append(vintage);
+            //   }
+            // });
         }); // End Wine Arr
       }); // End getJSON
     } else {

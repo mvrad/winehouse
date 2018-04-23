@@ -9,6 +9,30 @@ block content
         .left-panel
           h2 My Collection
           .collection-main
+            .collection-wine
+              img(src="images/glass-00.svg", alt="Wine Glass").wine-glass
+              |
+              span.wine-name King Cabber Cellars 
+              |
+              span.wine-type Cabernet Sauvignon 
+              |
+              span.wine-year 2012 
+              |
+              img(src="images/note.svg", alt="Note").wine-note
+              |
+              .wine-delete &times; 
+            .collection-wine
+              img(src="images/glass-04.svg", alt="Wine Glass").wine-glass
+              |
+              span.wine-name Shelton Lake Winery
+              |
+              span.wine-type Riesling 
+              |
+              span.wine-year 2014 
+              |
+              img(src="images/note.svg", alt="Note").wine-note
+              |
+              .wine-delete &times; 
 
         .right-panel
           h2 Wine Search
@@ -24,3 +48,4 @@ block content
               li.search-dropdown-list__vintage
               li.search-dropdown-list__type
               li.search-dropdown-list__price
+              button#add-to-collection.btn Add To Collection
