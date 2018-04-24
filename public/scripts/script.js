@@ -42,15 +42,14 @@ $(() => {
             vintage = "<span class=labels>Vintage: </span>" + wines[0].vintage,
             type = "<span class=labels>Type: </span>" + wines[0].type,
             price = "<span class=labels>Price: </span>" + "$" + wines[0].price,
-            img = "<img src=" + wines[0].image + ">",
-            newLink = img.replace("https://", "//");
+            img = "<img src=" + wines[0].image + ">";
 
             $(".search-dropdown-list__name").html(name);
             $(".search-dropdown-list__varietal").html(varietal);
             $(".search-dropdown-list__vintage").html(vintage);
             $(".search-dropdown-list__type").html(type);
             $(".search-dropdown-list__price").html(price);
-            $(".search-dropdown-list__image").html(newLink);
+            $(".search-dropdown-list__image").html(img);
 
             // $("#add-to-collection").click(() => {
             //   $(".collection-main").after(".collection-wine");
