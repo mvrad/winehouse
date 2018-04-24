@@ -3,6 +3,7 @@ extends layout
 block content
   header#register-home.header-home.header.header-content__home
     h1.title-raised Sign Up
+    h2 Save your collection.
     .main-container
 
       //- Registration Form
@@ -15,10 +16,6 @@ block content
           label(for="email") Email
           br
           input#email.form-control(type="email", placeholder="janedoe@example.com" name="email")
-        .form-group
-          label(for="favoriteBook") Favorite Wine
-          br
-          input#favoriteWine.form-control(type="text", placeholder="Cain Five 2012" name="favoriteWine")
         .form-group
           label(for="pw") Password
           br

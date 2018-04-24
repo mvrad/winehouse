@@ -143,7 +143,7 @@ p {
   margin: 18px;
 }
 
-#register-btn {
+#register-btn, #guest-btn {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 1.5em;
@@ -250,7 +250,11 @@ input {
     font-size: 2em;
   }
 
-  .item a {
+  .main-container h2:last-child {
+    margin-top: 0;
+  }
+
+  .item a, h4 {
     font-family: "Fira Sans", sans-serif;
     font-size: 1.3em;
     font-weight: 400;
@@ -408,6 +412,10 @@ input {
     text-overflow: ellipsis;
   }
 
+  #imgURL {
+    display: none;
+  }
+
   .wine-note {
     width: 28px;
     height: auto;
@@ -477,27 +485,7 @@ input {
   }
 
   .profile-container-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 80px;
-  }
-
-  .profile-left-panel {
-    text-align: right;
-    margin-right: 80px;
-  }
-
-  .profile-right-panel {
-    text-align: left;
-    margin-left: 80px;
-  }
-
-  .profile-right-panel p:first-child {
-    margin: 0;
-  }
-
-  .profile-right-panel p:nth-child(3) {
-    margin: 0;
+    margin: 80px auto;
   }
 
   #avatar {
