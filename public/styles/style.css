@@ -422,6 +422,7 @@ input {
   }
 
   .wine-delete {
+    cursor: pointer;
     font-weight: 700;
     font-size: 2.35em;
   }

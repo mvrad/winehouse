@@ -42,11 +42,11 @@ $(() => {
 
         $.each(wines, (i) => {
 
-          let name = "<span class=labels>Name: </span>" + wines[0].name,
-            varietal = "<span class=labels>Varietal: </span>" + wines[0].varietal,
-            vintage = "<span class=labels>Vintage: </span>" + wines[0].vintage,
-            type = "<span class=labels>Type: </span>" + wines[0].type,
-            price = "<span class=labels>Price: </span>" + "$" + wines[0].price,
+          let name = wines[0].name,
+            varietal = wines[0].varietal,
+            vintage = wines[0].vintage,
+            type = wines[0].type,
+            price = wines[0].price,
             img = "<img src=" + wines[0].image + ">",
             imgURL = wines[0].image;
 
@@ -69,7 +69,7 @@ $(() => {
   }); // End Keyup Event
 
   // Add Wine to Collection
-  $("#add-to-collection").click(() => {
+  $("#add-to-collection").on("click", () => {
     let name = $(".search-dropdown-list__name").text(),
       varietal = $(".search-dropdown-list__varietal").text(),
       vintage = $(".search-dropdown-list__vintage").text(),
@@ -85,6 +85,11 @@ $(() => {
       "<div class=wine-delete>&times</div>" + 
       "</div>"
     );
+  });
+
+  // Remove Wine from Collection
+  $(".collection-main").on("click", ".wine-delete", (e) => {
+    $(e.target).closest(".collection-wine").remove();
   });
 
 }); // End Doc Ready
