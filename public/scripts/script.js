@@ -23,7 +23,7 @@ $(() => {
   $("#login-email input").focus();
   $("#search-form input").focus();
 
-  // Wine Search (powered by Snooth API)
+  // Wine search (powered by Snooth API)
   $("#search").keyup((e) => {
 
     let search = $("#search").val().toLowerCase().trim(),
@@ -41,24 +41,25 @@ $(() => {
         let wines = data.wines;
 
         $.each(wines, (i) => {
-
-          let name = wines[0].name,
+          let code = wines[0].code,
+            img = "<img src=" + wines[0].image + ">",
+            imgURL = wines[0].image,
+            name = wines[0].name,
             varietal = wines[0].varietal,
             vintage = wines[0].vintage,
             type = wines[0].type,
-            price = wines[0].price,
-            img = "<img src=" + wines[0].image + ">",
-            imgURL = wines[0].image;
+            price = wines[0].price;
 
+          $(".search-dropdown-list__image").html(img);
           $(".search-dropdown-list__name").html(name);
           $(".search-dropdown-list__varietal").html(varietal);
           $(".search-dropdown-list__vintage").html(vintage);
           $(".search-dropdown-list__type").html(type);
           $(".search-dropdown-list__price").html(price);
-          $(".search-dropdown-list__image").html(img);
           $(".search-dropdown-list__imgURL").html(imgURL);
+          $(".search-dropdown-list__code").html(code);
 
-        }); // End Wine Arr
+        }); // End wine arr
 
       }); // End getJSON
 
@@ -66,30 +67,67 @@ $(() => {
       $(".search-dropdown").removeClass("is-active");
     }
 
-  }); // End Keyup Event
+  }); // End keyup event
 
-  // Add Wine to Collection
+  // Add wine to collection
   $("#add-to-collection").on("click", () => {
     let name = $(".search-dropdown-list__name").text(),
       varietal = $(".search-dropdown-list__varietal").text(),
       vintage = $(".search-dropdown-list__vintage").text(),
-      imgURL = $("#imgURL").text();
+      type = $(".search-dropdown-list__type").text(),
+      price = $(".search-dropdown-list__price").text(),
+      imgURL = $("#imgURL").text(),
+      code = $("#code").text(),
+      modalWindow = "";
 
     $(".collection-main").append(
-      "<div class=collection-wine>" + 
-      "<img class=wine-glass src=" + imgURL + ">" + 
-      "<span class=wine-name>" + name + "</span>" + 
-      "<span class=wine-type>" + varietal + "</span>" +  
-      "<span class=wine-year>" + vintage + "</span>" + 
-      "<img class=wine-note src='images/note.svg'" + ">" + 
-      "<div class=wine-delete>&times</div>" + 
+      "<div class=collection-wine>" +
+      "<div class=collection-wine__left>" +
+      "<img class=wine-photo src=" + imgURL + ">" +
+      "<div class=collection-wine__name>" +
+      "<span class=wine-name>" + name + "</span></div>" +
+      "<div class=collection-wine__varietal>" +
+      "<span class=wine-type>" + varietal + "</span></div>" +
+      "</div>" +
+      "<div class=collection-wine__right>" +
+      "<img class=wine-note src='images/note.svg'" + ">" +
+      "<img class=wine-delete src='images/remove.svg'" + ">" +
+      "</div>" +
       "</div>"
     );
-  });
 
-  // Remove Wine from Collection
+    // Add wine to modal window
+    modalWindow += "<div class=modal-content id=" + code + ">";
+    modalWindow += "<ul>";
+    modalWindow += "<li><span class=close>&times</span><br></li>";
+    modalWindow += "<li><img class=modal-photo src=" + imgURL + "></li>";
+    modalWindow += "<li><span class=modal-name>Name: </span>" + name + "</li>";
+    modalWindow += "<li><span class=modal-varietal>Varietal: </span>" + varietal + "</li>";
+    modalWindow += "<li><span class=modal-vintage>Vintage: </span>" + vintage + "</li>";
+    modalWindow += "<li><span class=modal-type>Type: </span>" + type + "</li>";
+    modalWindow += "<li><span class=modal-price>Price: </span>" + "$" + price + "</li>";
+    modalWindow += "</ul>"
+    modalWindow += "</div>";
+
+    $(".modal").html(modalWindow).hide();
+
+    // Modal window
+    let modalDiv = $(".modal-content");
+    $(".collection-main").on("click", ".wine-note", (e) => {
+      $.each(modalDiv, (i) => {
+        if (e.currentTarget.code === modalDiv[i].code) {
+          $(".modal").html(modalWindow).show();
+          $(".close").click((e) => {
+            $(".modal").html(modalWindow).hide();
+          });
+        }
+      });
+    }); // End modal window
+  }); // End on click event
+
+  // Remove wine from collection
   $(".collection-main").on("click", ".wine-delete", (e) => {
     $(e.target).closest(".collection-wine").remove();
   });
 
-}); // End Doc Ready
+}); // End doc ready

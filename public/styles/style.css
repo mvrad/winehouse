@@ -38,7 +38,8 @@ h1 {
   margin-top: 240px;
 }
 
-h2, p, label, input, button, textarea, .search-dropdown,
+h2, p, label, input, button, textarea,
+.search-dropdown, .modal-content,
 .collection-wine span {
   font-family: "Fira Sans", sans-serif;
 }
@@ -358,6 +359,7 @@ input {
     background: #fff url("../images/collection.jpg") no-repeat center/cover;
     border: 10px solid #000;
     height: calc(100vh - 60px);
+    overflow: auto;
   }
   
   .left-panel h2, .right-panel h2 {
@@ -377,54 +379,82 @@ input {
     border-top: 10px solid #000;
   }
 
-  .collection-wine {
-    background-color: #fff;
-    border-bottom: solid 2px #000;
-
+  .collection-wine,
+  .collection-wine__left,
+  .collection-wine__right {
     display: flex;
     flex-direction: row;
     flex-wrap: none;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    height: 60px;
-    margin: 0;
   }
 
-  .collection-wine span, .wine-delete {
+  .collection-wine {
+    background-color: #fff;
+    border-bottom: solid 2px #000;
+    height: 60px;
+    margin: 0 auto;
+  }
+
+  .collection-wine span {
+    font-size: 1.3em;
     font-weight: 400;
     color: #000;
     margin: 0;
   }
 
-  .wine-glass {
+  .wine-photo {
     width: 46px;
     height: auto;
   }
 
-  .collection-wine span {
-    font-size: 1.3em;
+  .collection-wine__left {
+    float: left;
+    margin: 0;
   }
 
-  .wine-name, .wine-type {
-    width: 180px;
+  .collection-wine__right {
+    float: right;
+    margin: 0;
+  }
+
+  .collection-wine__name,
+  .collection-wine__varietal {
+    max-width: 220px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin: 0 20px;
+  }
+
+  .collection-wine__right {
+    margin-left: auto;
   }
 
   #imgURL {
     display: none;
   }
 
+  #code {
+    display: none;
+  }
+
   .wine-note {
-    width: 28px;
+    width: 29px;
     height: auto;
+    margin: 0 auto;
   }
 
   .wine-delete {
+    color: #c0c0c0;
     cursor: pointer;
-    font-weight: 700;
-    font-size: 2.35em;
+    width: 29px;
+    height: auto;
+    margin: 0 10px;
+  }
+
+  .wine-delete:hover {
+    color: #000;
   }
 
   #search-form {
@@ -471,12 +501,25 @@ input {
   }
 
   .search-dropdown-list li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: none;
+    justify-content: center;
     text-align: center;
     padding: 10px;
   }
 
+  .search-dropdown-list li:first-child {
+    padding-top: 20px;
+  }
+
+  .search-dropdown-list li:nth-child(6){
+    padding-bottom: 20px;
+  }
+
   .labels {
     font-weight: 700;
+    padding-right: 5px;
   }
 
   #profile-lg h2 {
@@ -497,5 +540,67 @@ input {
   #about-me {
     resize: vertical;
     margin-top: 0;
+  }
+
+  .wine-note {
+    cursor: pointer;
+  }
+
+  /*=============
+  Modal Window
+  =============*/
+
+  .close {
+    font-size: 2.4em;
+    color: #c0c0c0;
+    float: right;
+    cursor: pointer;
+  }
+
+  .close:hover {
+    color: #000;
+  }
+
+  .modal {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 640px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    border: solid 1px #d3d3d3;
+    border-radius: 10px;
+    font-size: 1.125em;
+    text-align: center;
+    list-style: none;
+    padding: 0 20px 20px;
+  }
+
+  .modal-photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 30px auto 0;
+  }
+
+  .modal span {
+    font-weight: 700;
+  }
+
+  .modal-content li {
+    padding: 10px 0;
   }
 }
