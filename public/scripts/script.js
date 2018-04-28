@@ -130,4 +130,11 @@ $(() => {
     $(e.target).closest(".collection-wine").remove();
   });
 
+  // Left to do:
+  // Modal window for each wine in collection
+  // Add note in modal window
+  // Edit wine information entries
+  // Responsive design
+  // Save wine collection
+
 }); // End doc ready
