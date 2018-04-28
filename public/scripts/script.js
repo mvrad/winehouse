@@ -55,7 +55,7 @@ $(() => {
           $(".search-dropdown-list__varietal").html(varietal);
           $(".search-dropdown-list__vintage").html(vintage);
           $(".search-dropdown-list__type").html(type);
-          $(".search-dropdown-list__price").html(price);
+          $(".search-dropdown-list__price").html("$" + price);
           $(".search-dropdown-list__imgURL").html(imgURL);
           $(".search-dropdown-list__code").html(code);
 
@@ -90,13 +90,27 @@ $(() => {
       "<span class=wine-type>" + varietal + "</span></div>" +
       "</div>" +
       "<div class=collection-wine__right>" +
-      "<img class=wine-note src='images/note.svg'" + ">" +
+      "<img class=wine-note id=" + code + " src='images/note.svg'" + ">" +
       "<img class=wine-delete src='images/remove.svg'" + ">" +
       "</div>" +
       "</div>"
     );
 
     // Add wine to modal window
+    $(".modal").append(
+      "<div class=modal-content id=" + code + ">" +
+      "<ul>" +
+      "<li><span class=close>&times</span><br></li>" +
+      "<li><img class=modal-photo src=" + imgURL + "></li>" +
+      "<li><span class=modal-name>Name: </span>" + name + "</li>" +
+      "<li><span class=modal-varietal>Varietal: </span>" + varietal + "</li>" +
+      "<li><span class=modal-vintage>Vintage: </span>" + vintage + "</li>" +
+      "<li><span class=modal-type>Type: </span>" + type + "</li>" +
+      "<li><span class=modal-price>Price: </span>" + price + "</li>" +
+      "</ul>" +
+      "</div>"
+    );
+
     modalWindow += "<div class=modal-content id=" + code + ">";
     modalWindow += "<ul>";
     modalWindow += "<li><span class=close>&times</span><br></li>";
@@ -105,8 +119,8 @@ $(() => {
     modalWindow += "<li><span class=modal-varietal>Varietal: </span>" + varietal + "</li>";
     modalWindow += "<li><span class=modal-vintage>Vintage: </span>" + vintage + "</li>";
     modalWindow += "<li><span class=modal-type>Type: </span>" + type + "</li>";
-    modalWindow += "<li><span class=modal-price>Price: </span>" + "$" + price + "</li>";
-    modalWindow += "</ul>"
+    modalWindow += "<li><span class=modal-price>Price: </span>" + price + "</li>";
+    modalWindow += "</ul>";
     modalWindow += "</div>";
 
     $(".modal").html(modalWindow).hide();
@@ -115,8 +129,8 @@ $(() => {
     let modalDiv = $(".modal-content");
     $(".collection-main").on("click", ".wine-note", (e) => {
       $.each(modalDiv, (i) => {
-        if (e.currentTarget.code === modalDiv[i].code) {
-          $(".modal").html(modalWindow).show();
+        if (e.currentTarget.id === modalDiv[i].id) {
+          $(".modal").html(modalDiv[i]).show();
           $(".close").click((e) => {
             $(".modal").html(modalWindow).hide();
           });
@@ -131,7 +145,6 @@ $(() => {
   });
 
   // Left to do:
-  // Modal window for each wine in collection
   // Add note in modal window
   // Edit wine information entries
   // Responsive design
