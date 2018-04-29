@@ -107,7 +107,6 @@ p {
   font-size: 1.45em;
   color: #000;
   text-transform: uppercase;
-
   margin: 0 auto;
 }
 
@@ -144,7 +143,7 @@ p {
   margin: 18px;
 }
 
-#register-btn, #guest-btn {
+#guest-btn {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 1.5em;
@@ -153,7 +152,6 @@ p {
   background-color: #1e90ff;
   border-radius: 10px;
   outline: none;
-
   padding: 10px 15px;
   margin: 20px 0 100px;
 }
@@ -184,7 +182,10 @@ input {
   padding: 10px;
 }
 
-#signup-btn, #login-btn, #add-to-collection {
+#signup-btn,
+#login-btn,
+#add-to-collection,
+#save-note {
   font-size: 1.125em;
   font-weight: 400;
   color: #fff;
@@ -324,10 +325,12 @@ input {
 
   /* Modules */
 
+  #guest-btn:hover,
   #register-btn:hover,
   #signup-btn:hover,
   #login-btn:hover,
-  #add-to-collection:hover {
+  #add-to-collection:hover,
+  #save-btn:hover {
     cursor: pointer;
     filter: brightness(75%);
   }
@@ -563,6 +566,7 @@ input {
     color: #c0c0c0;
     float: right;
     cursor: pointer;
+    margin-left: -22.422px;
   }
 
   .close:hover {
@@ -583,8 +587,8 @@ input {
     display: block;
     background-color: #fff;
     transform: translate(-50%, -50%);
-    width: 500px;
-    height: 640px;
+    width: 400px;
+    height: 690px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -595,6 +599,7 @@ input {
     text-align: center;
     list-style: none;
     padding: 0 20px 20px;
+    margin: 0 auto;
   }
 
   .modal-photo {
@@ -602,14 +607,48 @@ input {
     max-width: 100%;
     height: auto;
     text-align: center;
-    margin: 30px auto 0;
+    margin: 0 auto;
   }
 
   .modal span {
     font-weight: 700;
   }
 
+  .modal-name,
+  .modal-varietal,
+  .modal-vintage,
+  .modal-type,
+  .modal-price {
+    width: 460px;
+  }
+
   .modal-content li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 10px 0;
+  }
+
+  #notes {
+    width: 100%;
+    height: 170px;
+    padding: 0;
+    margin: 10px auto 20px;
+  }
+
+  #save-btn {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.125em;
+    text-align: center;
+    width: 80px;
+    height: auto;
+    color: #fff;
+    background-color: #1e90ff;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    margin: 0 auto;
   }
 }

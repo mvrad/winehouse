@@ -99,13 +99,16 @@ $(() => {
     // Add wine to modal window
     modalWindow += "<div class=modal-content id=" + code + ">";
     modalWindow += "<ul>";
-    modalWindow += "<li><span class=close>&times</span><br></li>";
+    modalWindow += "<span class=close>&times</span><br>";
     modalWindow += "<li><img class=modal-photo src=" + imgURL + "></li>";
     modalWindow += "<li><span class=modal-name>Name: </span>" + name + "</li>";
     modalWindow += "<li><span class=modal-varietal>Varietal: </span>" + varietal + "</li>";
     modalWindow += "<li><span class=modal-vintage>Vintage: </span>" + vintage + "</li>";
     modalWindow += "<li><span class=modal-type>Type: </span>" + type + "</li>";
     modalWindow += "<li><span class=modal-price>Price: </span>" + price + "</li>";
+    modalWindow += "<li><span class=modal-notes>Tasting Notes: </span></li>";
+    modalWindow += "<textarea id=notes></textarea>";
+    modalWindow += "<button id=save-btn>Save</button>";
     modalWindow += "</ul>";
     modalWindow += "</div>";
 
