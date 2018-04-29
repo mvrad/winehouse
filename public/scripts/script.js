@@ -85,13 +85,13 @@ $(() => {
       "<div class=collection-wine__left>" +
       "<img class=wine-photo src=" + imgURL + ">" +
       "<div class=collection-wine__name>" +
-      "<span class=wine-name>" + name + "</span></div>" +
+      "<span class=wine-name title=Name>" + name + "</span></div>" +
       "<div class=collection-wine__varietal>" +
-      "<span class=wine-type>" + varietal + "</span></div>" +
+      "<span class=wine-type title=Varietal>" + varietal + "</span></div>" +
       "</div>" +
       "<div class=collection-wine__right>" +
-      "<img class=wine-note id=" + code + " src='images/note.svg'" + ">" +
-      "<img class=wine-delete src='images/remove.svg'" + ">" +
+      "<img class=wine-note id=" + code + " src=images/note.svg title=Notes" + ">" +
+      "<img class=wine-delete src=images/remove.svg title=Remove" + ">" +
       "</div>" +
       "</div>"
     );
@@ -101,12 +101,12 @@ $(() => {
     modalWindow += "<ul>";
     modalWindow += "<span class=close>&times</span><br>";
     modalWindow += "<li><img class=modal-photo src=" + imgURL + "></li>";
-    modalWindow += "<li><span class=modal-name>Name: </span>" + name + "</li>";
-    modalWindow += "<li><span class=modal-varietal>Varietal: </span>" + varietal + "</li>";
-    modalWindow += "<li><span class=modal-vintage>Vintage: </span>" + vintage + "</li>";
-    modalWindow += "<li><span class=modal-type>Type: </span>" + type + "</li>";
-    modalWindow += "<li><span class=modal-price>Price: </span>" + price + "</li>";
-    modalWindow += "<li><span class=modal-notes>Tasting Notes: </span></li>";
+    modalWindow += "<li><span class=modal-label>Name: </span><span class=modal-html>" + name + "</span>";
+    modalWindow += "<li><span class=modal-label>Varietal: </span><span class=modal-html>" + varietal + "</span>";
+    modalWindow += "<li><span class=modal-label>Vintage: </span><span class=modal-html>" + vintage + "</span>";
+    modalWindow += "<li><span class=modal-label>Type: </span><span class=modal-html>" + type + "</span>";
+    modalWindow += "<li><span class=modal-label>Price: </span><span class=modal-html>" + price + "</span>";
+    modalWindow += "<li><span class=modal-label>Tasting Notes: </span></li>";
     modalWindow += "<textarea id=notes></textarea>";
     modalWindow += "<button id=save-btn>Save</button>";
     modalWindow += "</ul>";
@@ -134,8 +134,7 @@ $(() => {
   });
 
   // Left to do:
-  // Add note in modal window
-  // Edit wine information entries
+  // Save note
   // Responsive design
   // Save wine collection
 
