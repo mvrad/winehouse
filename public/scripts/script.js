@@ -123,6 +123,14 @@ $(() => {
           $(".close").click((e) => {
             $(".modal").html(modalWindow).hide();
           });
+          $(document).on("click", "#save-btn", () => {
+            $("#notes").replaceWith("<div class=notes-content>" + $("#notes").val() + "</div>");
+            $("#save-btn").replaceWith("<button id=edit-btn>Edit</button>");
+          });
+          $(document).on("click", "#edit-btn", () => {
+            $(".notes-content").replaceWith("<textarea id=notes></textarea>");
+            $("#edit-btn").replaceWith("<button id=save-btn>Save</button>");
+          });
         }
       });
     }); // End modal window
@@ -134,7 +142,6 @@ $(() => {
   });
 
   // Left to do:
-  // Save note
   // Responsive design
   // Save wine collection
 
