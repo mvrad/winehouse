@@ -4,7 +4,7 @@ $(() => {
 
   // Globals
   const akey = config.KEY,
-    snoothAPI = "https://api.snooth.com/wines/?akey=" + akey + "&q=";
+    snoothAPI = "//api.snooth.com/wines/?akey=" + akey + "&q=";
 
   // Hamburger menu animation
   $(".hamburger").on("click", () => {

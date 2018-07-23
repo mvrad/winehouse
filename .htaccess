@@ -1,2 +1,0 @@
-RewriteEngine On
-RewriteRule ^apache-redirect-http-to-https\.jpeg$ https://ei.isnooth.com/multimedia/b/4/1/image_1223885_square.jpeg [R=301,L]
