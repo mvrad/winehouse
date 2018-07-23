@@ -1,9 +1,2 @@
-RewriteEngine On 
-RewriteCond %{HTTP_HOST} ^ei.isnooth.com\.com [NC]
-RewriteCond %{SERVER_PORT} 80 
-RewriteRule ^(.*)$ https://ei.isnooth.com/$1 [R=301,L]
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+RewriteEngine On
+RewriteRule ^apache-redirect-http-to-https\.jpeg$ https://ei.isnooth.com/multimedia/b/4/1/image_1223885_square.jpeg [R=301,L]
