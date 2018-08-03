@@ -413,34 +413,36 @@ input {
     height: auto;
   }
 
-  .collection-wine__left {
-    float: left;
+  /* .collection-wine__left {
     margin: 0;
   }
 
   .collection-wine__right {
-    float: right;
     margin: 0;
-  }
+  } */
 
   .collection-wine__name,
   .collection-wine__varietal {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 0 20px;
+    margin: 0 10px;
   }
 
   .collection-wine__name {
-    width: 220px;
+    width: 40%;
   }
 
   .collection-wine__varietal {
-    width: 180px;
+    width: 35%;
   }
 
-  .collection-wine__right {
-    margin-left: auto;
+  .collection-wine__vintage {
+    width: 20%;
+  }
+
+  .options {
+    width: 15%;
   }
 
   #imgURL {

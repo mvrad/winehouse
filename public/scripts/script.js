@@ -82,14 +82,16 @@ $(() => {
 
     $(".collection-main").append(
       "<div class=collection-wine>" +
-      "<div class=collection-wine__left>" +
+      // "<div class=collection-wine__left>" +
       // "<img class=wine-photo src=" + imgURL + ">" +
       "<div class=collection-wine__name>" +
       "<span class=wine-name title=Name>" + name + "</span></div>" +
       "<div class=collection-wine__varietal>" +
       "<span class=wine-type title=Varietal>" + varietal + "</span></div>" +
-      "</div>" +
-      "<div class=collection-wine__right>" +
+      "<div class=collection-wine__vintage>" +
+      "<span class=wine-type title=Vintage>" + vintage + "</span></div>" +
+      // "</div>" +
+      "<div class=options>" +
       "<img class=wine-note id=" + code + " src=images/note.svg title=Notes" + ">" +
       "<img class=wine-delete src=images/remove.svg title=Remove" + ">" +
       "</div>" +
