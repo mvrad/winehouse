@@ -42,21 +42,21 @@ $(() => {
 
         $.each(wines, (i) => {
           let code = wines[0].code,
-            img = "<img src=" + wines[0].image + ">",
-            imgURL = wines[0].image,
+            // img = "<img src=" + wines[0].image + ">",
+            // imgURL = wines[0].image,
             name = wines[0].name,
             varietal = wines[0].varietal,
             vintage = wines[0].vintage,
             type = wines[0].type,
             price = wines[0].price;
 
-          $(".search-dropdown-list__image").html(img);
+          // $(".search-dropdown-list__image").html(img);
           $(".search-dropdown-list__name").html(name);
           $(".search-dropdown-list__varietal").html(varietal);
           $(".search-dropdown-list__vintage").html(vintage);
           $(".search-dropdown-list__type").html(type);
           $(".search-dropdown-list__price").html("$" + price);
-          $(".search-dropdown-list__imgURL").html(imgURL);
+          // $(".search-dropdown-list__imgURL").html(imgURL);
           $(".search-dropdown-list__code").html(code);
 
         }); // End wine arr
@@ -76,22 +76,22 @@ $(() => {
       vintage = $(".search-dropdown-list__vintage").text(),
       type = $(".search-dropdown-list__type").text(),
       price = $(".search-dropdown-list__price").text(),
-      imgURL = $("#imgURL").text(),
+      // imgURL = $("#imgURL").text(),
       code = $("#code").text(),
       modalWindow = "";
 
     $(".collection-main").append(
       "<div class=collection-wine>" +
       "<div class=collection-wine__left>" +
-      "<img class=wine-photo src=" + imgURL + ">" +
+      // "<img class=wine-photo src=" + imgURL + ">" +
       "<div class=collection-wine__name>" +
       "<span class=wine-name title=Name>" + name + "</span></div>" +
       "<div class=collection-wine__varietal>" +
       "<span class=wine-type title=Varietal>" + varietal + "</span></div>" +
       "</div>" +
       "<div class=collection-wine__right>" +
-      "<img class=wine-note id=" + code + " src=images/note.svg title=Notes" + ">" +
-      "<img class=wine-delete src=images/remove.svg title=Remove" + ">" +
+      // "<img class=wine-note id=" + code + " src=images/note.svg title=Notes" + ">" +
+      // "<img class=wine-delete src=images/remove.svg title=Remove" + ">" +
       "</div>" +
       "</div>"
     );
@@ -100,7 +100,7 @@ $(() => {
     modalWindow += "<div class=modal-content id=" + code + ">";
     modalWindow += "<ul>";
     modalWindow += "<span class=close>&times</span><br>";
-    modalWindow += "<li><img class=modal-photo src=" + imgURL + "></li>";
+    // modalWindow += "<li><img class=modal-photo src=" + imgURL + "></li>";
     modalWindow += "<li><span class=modal-label>Name: </span><span class=modal-html>" + name + "</span>";
     modalWindow += "<li><span class=modal-label>Varietal: </span><span class=modal-html>" + varietal + "</span>";
     modalWindow += "<li><span class=modal-label>Vintage: </span><span class=modal-html>" + vintage + "</span>";
