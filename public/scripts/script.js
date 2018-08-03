@@ -90,8 +90,8 @@ $(() => {
       "<span class=wine-type title=Varietal>" + varietal + "</span></div>" +
       "</div>" +
       "<div class=collection-wine__right>" +
-      // "<img class=wine-note id=" + code + " src=images/note.svg title=Notes" + ">" +
-      // "<img class=wine-delete src=images/remove.svg title=Remove" + ">" +
+      "<img class=wine-note id=" + code + " src=images/note.svg title=Notes" + ">" +
+      "<img class=wine-delete src=images/remove.svg title=Remove" + ">" +
       "</div>" +
       "</div>"
     );
