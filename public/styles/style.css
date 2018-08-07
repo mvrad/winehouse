@@ -254,7 +254,7 @@ input[type="radio"] {
 .dropdown-edit:hover,
 .dropdown-save:hover {
   cursor: pointer;
-  color: #1611ff;
+  color: #0f487f;
 }
 
 .list-item-edit {
@@ -408,7 +408,7 @@ input[type="radio"] {
   #save-btn:hover,
   #edit-btn:hover {
     cursor: pointer;
-    background-color: #1611ff;
+    background-color: #0f487f;
   }
 
   /* Registration Form */

@@ -167,7 +167,6 @@ $(() => {
   });
 
   // Get current year
-  let currentYear = new Date().getFullYear();
-  $(".year").text(currentYear);
+  $(".year").text(new Date().getFullYear());
 
 }); // End doc ready
