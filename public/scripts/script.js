@@ -75,8 +75,7 @@ $(() => {
     "images/red.svg",
     "images/rose.svg",
     "images/white.svg",
-    "images/remove.svg",
-    "images/vertical-dots.svg"
+    "images/remove.svg"
   ]);
 
   // Edit, save input fields
