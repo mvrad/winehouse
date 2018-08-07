@@ -65,6 +65,20 @@ $(() => {
 
   }); // End keyup event
 
+  // Preload images
+  function preload(arrayOfImages) {
+    $(arrayOfImages).each(function(){
+      $('<img/>')[0].src = this;
+    });
+  }
+  preload([
+    "images/red.svg",
+    "images/rose.svg",
+    "images/white.svg",
+    "images/remove.svg",
+    "images/vertical-dots.svg"
+  ]);
+
   // Edit, save input fields
   $(document).on("click", ".dropdown-edit", (e) => {
     const saveBtn = "<button class=dropdown-save>Save</button>",
@@ -99,12 +113,11 @@ $(() => {
       <span class=wine-name title=Name>${name}</span>
       </div>
       <div class=collection-varietal>
-      <span class=wine-type title=Varietal>${varietal}</span></div>
+      <span class=wine-varietal title=Varietal>${varietal}</span></div>
       <div class=options>
       <img class=wine-note id=${code} src=images/note.svg title=Notes>
       <img class=wine-delete src=images/remove.svg title=Remove>
       </div>
-      <img class=vertical-dots src=images/vertical-dots.svg title=Menu>
       </div>
       </div>`
     );

@@ -217,11 +217,8 @@ input {
 }
 
 .options {
-  display: none;
-}
-
-.vertical-dots {
-  display: block;
+  text-align: right;
+  width: 200px;
 }
 
 .wine-glass {
@@ -287,6 +284,10 @@ input[type="radio"] {
   font-weight: 400;
   color: #000;
   margin: 0;
+}
+
+.wine-name, .wine-varietal {
+  font-size: 1.2em;
 }
 
 /* Breakpoints */
@@ -687,16 +688,5 @@ input[type="radio"] {
     width: auto;
     height: 23px;
     margin-bottom: 40px;
-  }
-}
-
-@media (min-width: 1376px) {
-  .options {
-    display: block;
-    width: 200px;
-  }
-
-  .vertical-dots {
-    display: none;
   }
 }
