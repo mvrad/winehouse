@@ -18,23 +18,38 @@ block content
             input.form-control(type="search" id="search" name="search" placeholder="Search millions of wines.")
           .search-dropdown
             ul.search-dropdown-list
-              li.search-dropdown-list__image
               li
                 span.labels Name: 
-                .search-dropdown-list__name
+                #name.list-item
+                button.dropdown-edit Edit
               li
                 span.labels Varietal: 
-                .search-dropdown-list__varietal
+                #varietal.list-item
+                button.dropdown-edit Edit
               li
                 span.labels Vintage: 
-                .search-dropdown-list__vintage
+                #vintage.list-item
+                button.dropdown-edit Edit
               li
                 span.labels Type: 
-                .search-dropdown-list__type
+                #type.list-item
+                button.dropdown-edit Edit
               li
                 span.labels Price: 
-                .search-dropdown-list__price
-              li#imgURL.search-dropdown-list__imgURL
+                #price.list-item
+                button.dropdown-edit Edit
+              li
+                span.labels Choose Color:
+              li.search-dropdown-list__image
+                div.image-selection
+                  object(type="image/svg+xml" data="../images/red.svg" class="wine-glass")
+                  input(type="radio" name="color" value="red")
+                div.image-selection
+                  object(type="image/svg+xml" data="../images/rose.svg" class="wine-glass")
+                  input(type="radio" name="color" value="rose")
+                div.image-selection
+                  object(type="image/svg+xml" data="../images/white.svg" class="wine-glass")
+                  input(type="radio" name="color" value="white")
               li#code.search-dropdown-list__code
               button#add-to-collection Add To Collection
         .modal

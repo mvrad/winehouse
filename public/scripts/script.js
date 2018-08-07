@@ -42,22 +42,18 @@ $(() => {
 
         $.each(wines, (i) => {
           let code = wines[0].code,
-            // img = "<img src=" + wines[0].image + ">",
-            // imgURL = wines[0].image,
             name = wines[0].name,
             varietal = wines[0].varietal,
             vintage = wines[0].vintage,
             type = wines[0].type,
             price = wines[0].price;
 
-          // $(".search-dropdown-list__image").html(img);
-          $(".search-dropdown-list__name").html(name);
-          $(".search-dropdown-list__varietal").html(varietal);
-          $(".search-dropdown-list__vintage").html(vintage);
-          $(".search-dropdown-list__type").html(type);
-          $(".search-dropdown-list__price").html("$" + price);
-          // $(".search-dropdown-list__imgURL").html(imgURL);
-          $(".search-dropdown-list__code").html(code);
+          $("#name").html(name);
+          $("#varietal").html(varietal);
+          $("#vintage").html(vintage);
+          $("#type").html(type);
+          $("#price").html("$" + price);
+          $("#code").html(code);
 
         }); // End wine arr
 
@@ -69,40 +65,54 @@ $(() => {
 
   }); // End keyup event
 
+  // Edit, save input fields
+  $(document).on("click", ".dropdown-edit", (e) => {
+    const saveBtn = "<button class=dropdown-save>Save</button>",
+      id = $(e.target).closest("li").find(".list-item").attr("id");
+    $(e.target).closest("li").find(".list-item").replaceWith(`<input id=${id} class=list-item-edit></input>`);
+    $(".list-item-edit").focus();
+    $(e.target).closest(".dropdown-edit").replaceWith(saveBtn);
+  });
+  $(document).on("click", ".dropdown-save", (e) => {
+    const editBtn = "<button class=dropdown-edit>Edit</button>",
+      idInput = $(e.target).closest("li").find(".list-item-edit").attr("id"),
+      textEdit = $(".list-item-edit").val();
+    $(e.target).closest("li").find("input").replaceWith(`<div id=${idInput} class=list-item>${textEdit}</div>`);
+    $(e.target).closest(".dropdown-save").replaceWith(editBtn);
+  });
+
   // Add wine to collection
   $("#add-to-collection").on("click", () => {
-    let name = $(".search-dropdown-list__name").text(),
-      varietal = $(".search-dropdown-list__varietal").text(),
-      vintage = $(".search-dropdown-list__vintage").text(),
-      type = $(".search-dropdown-list__type").text(),
-      price = $(".search-dropdown-list__price").text(),
-      // imgURL = $("#imgURL").text(),
+    let img = $("input[name=color]:checked").val(),
+      name = $("#name").text(),
+      varietal = $("#varietal").text(),
+      vintage = $("#vintage").text(),
+      type = $("#type").text(),
+      price = $("#price").text(),
       code = $("#code").text(),
       modalWindow = "";
 
     $(".collection-main").append(
-      "<div class=collection-wine>" +
-      // "<div class=collection-wine__left>" +
-      // "<img class=wine-photo src=" + imgURL + ">" +
-      "<div class=collection-wine__name>" +
-      "<span class=wine-name title=Name>" + name + "</span></div>" +
-      "<div class=collection-wine__varietal>" +
-      "<span class=wine-type title=Varietal>" + varietal + "</span></div>" +
-      "<div class=collection-wine__vintage>" +
-      "<span class=wine-type title=Vintage>" + vintage + "</span></div>" +
-      // "</div>" +
-      "<div class=options>" +
-      "<img class=wine-note id=" + code + " src=images/note.svg title=Notes" + ">" +
-      "<img class=wine-delete src=images/remove.svg title=Remove" + ">" +
-      "</div>" +
-      "</div>"
+      `<div class=collection-wine>
+      <img class=wine-img src=images/${img}.svg title=Color>
+      <div class=collection-name>
+      <span class=wine-name title=Name>${name}</span>
+      </div>
+      <div class=collection-varietal>
+      <span class=wine-type title=Varietal>${varietal}</span></div>
+      <div class=options>
+      <img class=wine-note id=${code} src=images/note.svg title=Notes>
+      <img class=wine-delete src=images/remove.svg title=Remove>
+      </div>
+      <img class=vertical-dots src=images/vertical-dots.svg title=Menu>
+      </div>
+      </div>`
     );
 
     // Add wine to modal window
     modalWindow += "<div class=modal-content id=" + code + ">";
     modalWindow += "<ul>";
     modalWindow += "<span class=close>&times</span><br>";
-    // modalWindow += "<li><img class=modal-photo src=" + imgURL + "></li>";
     modalWindow += "<li><span class=modal-label>Name: </span><span class=modal-html>" + name + "</span>";
     modalWindow += "<li><span class=modal-label>Varietal: </span><span class=modal-html>" + varietal + "</span>";
     modalWindow += "<li><span class=modal-label>Vintage: </span><span class=modal-html>" + vintage + "</span>";
@@ -143,8 +153,8 @@ $(() => {
     $(e.target).closest(".collection-wine").remove();
   });
 
-  // Left to do:
-  // Responsive design
-  // Save wine collection
+  // Get current year
+  let currentYear = new Date().getFullYear();
+  $(".year").text(currentYear);
 
 }); // End doc ready

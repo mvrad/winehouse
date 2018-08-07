@@ -73,6 +73,7 @@ p {
 /* Containers */
 
 .main-container {
+  padding-bottom: 23px;
   margin: 0 20px;
 }
 
@@ -215,6 +216,79 @@ input {
   display: none;
 }
 
+.options {
+  display: none;
+}
+
+.vertical-dots {
+  display: block;
+}
+
+.wine-glass {
+  width: auto;
+  height: 100px;
+}
+
+input[type="radio"] {
+  width: 15px;
+  margin-top: 20px;
+}
+
+.image-selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wine-img {
+  width: auto;
+  height: 40px;
+}
+
+.dropdown-edit, .dropdown-save {
+  color: #1e90ff;
+  background-color: #fff;
+  border: none;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.dropdown-edit:hover,
+.dropdown-save:hover {
+  cursor: pointer;
+  color: #1611ff;
+}
+
+.list-item-edit {
+  width: 228px;
+  height: 40px;
+  border: 1px solid #1e90ff;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.collection-name, .collection-varietal {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collection-name {
+  width: 60%;
+}
+
+.collection-varietal {
+  width: 40%;
+}
+
+.wine-name, .wine-type {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+
 /* Breakpoints */
 
 @media (min-width: 824px) {
@@ -333,7 +407,7 @@ input {
   #save-btn:hover,
   #edit-btn:hover {
     cursor: pointer;
-    filter: brightness(75%);
+    background-color: #1611ff;
   }
 
   /* Registration Form */
@@ -399,54 +473,6 @@ input {
     width: auto;
     height: 60px;
     margin: 0 auto;
-  }
-
-  .collection-wine span {
-    font-size: 1.3em;
-    font-weight: 400;
-    color: #000;
-    margin: 0;
-  }
-
-  .wine-photo {
-    width: 46px;
-    height: auto;
-  }
-
-  /* .collection-wine__left {
-    margin: 0;
-  }
-
-  .collection-wine__right {
-    margin: 0;
-  } */
-
-  .collection-wine__name,
-  .collection-wine__varietal {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 0 10px;
-  }
-
-  .collection-wine__name {
-    width: 40%;
-  }
-
-  .collection-wine__varietal {
-    width: 35%;
-  }
-
-  .collection-wine__vintage {
-    width: 20%;
-  }
-
-  .options {
-    width: 15%;
-  }
-
-  #imgURL {
-    display: none;
   }
 
   #code {
@@ -517,8 +543,8 @@ input {
   .search-dropdown-list li {
     display: flex;
     flex-direction: row;
-    flex-wrap: none;
     justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 10px;
   }
@@ -653,5 +679,24 @@ input {
     word-wrap: break-word;
     text-align: left;
     margin: 10px auto 10px;
+  }
+
+  .footer {
+    right: 0; bottom: 0; left: 0;
+    position: absolute;
+    width: auto;
+    height: 23px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1376px) {
+  .options {
+    display: block;
+    width: 200px;
+  }
+
+  .vertical-dots {
+    display: none;
   }
 }
