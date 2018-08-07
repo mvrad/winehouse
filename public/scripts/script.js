@@ -75,6 +75,7 @@ $(() => {
     "images/red.svg",
     "images/rose.svg",
     "images/white.svg",
+    "images/note.svg",
     "images/remove.svg"
   ]);
 
