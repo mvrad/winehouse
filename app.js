@@ -68,5 +68,5 @@ app.listen(PORT, function () {
 
 // Ping app every 5 minutes
 setInterval(function() {
-  http.get("http://winoapp.herokuapp.com");
+  http.get("https://winoapp.herokuapp.com");
 }, 300000);
