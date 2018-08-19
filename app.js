@@ -3,7 +3,6 @@ const express = require("express"),
   mongoose = require("mongoose"),
   session = require("express-session"),
   MongoStore = require("connect-mongo")(session),
-  http = require("http"),
   PORT = process.env.PORT || 3000,
   app = express();
 
@@ -65,8 +64,3 @@ app.use(function(err, req, res, next) {
 app.listen(PORT, function () {
   console.log(`Express app listening on port ${ PORT }`);
 });
-
-// Ping app every 5 minutes
-setInterval(function() {
-  http.get("http://winoapp.herokuapp.com");
-}, 300000);
