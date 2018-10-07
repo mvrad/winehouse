@@ -1,6 +1,9 @@
 {
   "name": "wino",
   "version": "1.0.0",
+  "engines": {
+  "node": "8.11.3"
+  },
   "description": "A wine cellar management app that lets you track your collection and see its values as well as keep tasting notes and food pairing suggestions.",
   "main": "app.js",
   "bin": {
