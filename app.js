@@ -16,7 +16,6 @@ app.use(helmet());
 // csp middleware
 app.use(csp({
   directives: {
-    fontSrc: ["https://fonts.google.com/"],
     upgradeInsecureRequests: true,
     workerSrc: false
   },
