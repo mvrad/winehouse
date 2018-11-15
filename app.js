@@ -3,14 +3,9 @@ const express = require("express"),
   mongoose = require("mongoose"),
   session = require("express-session"),
   MongoStore = require("connect-mongo")(session),
-  helmet = require("helmet"),
-  referrerPolicy = require("referrer-policy"),
   expiryDate = new Date(Date.now() + 60 * 60 * 1000),
   PORT = process.env.PORT || 3000,
   app = express();
-
-// helmet
-app.use(helmet());
 
 // csp middleware
 app.use(csp({
@@ -27,9 +22,6 @@ app.use(csp({
   disableAndroid: false,
   browserSniff: true
 }));
-
-// referrer policy
-app.use(referrerPolicy());
 
 // mongodb connection
 const db = mongoose.connection;
