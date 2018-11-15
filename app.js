@@ -4,12 +4,29 @@ const express = require("express"),
   session = require("express-session"),
   MongoStore = require("connect-mongo")(session),
   helmet = require("helmet"),
+  csp = require('helmet-csp'),
   expiryDate = new Date(Date.now() + 60 * 60 * 1000),
   PORT = process.env.PORT || 3000,
   app = express();
 
 // helmet
 app.use(helmet());
+
+// csp middleware
+app.use(csp({
+  directives: {
+    styleSrc: ["/styles/base.css", "/styles/hamburgers.min.css", "/styles/style.css"],
+    fontSrc: ["https://fonts.google.com/"],
+    imgSrc: ["images/"],
+    upgradeInsecureRequests: true,
+    workerSrc: false
+  },
+  loose: false,
+  reportOnly: false,
+  setAllHeaders: true,
+  disableAndroid: false,
+  browserSniff: true
+}));
 
 // mongodb connection
 const db = mongoose.connection;
