@@ -29,9 +29,7 @@ app.use(csp({
 }));
 
 // referrer policy
-app.use(referrerPolicy({
-  policy: "same-origin"
-}));
+app.use(referrerPolicy());
 
 // mongodb connection
 const db = mongoose.connection;
