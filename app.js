@@ -16,9 +16,7 @@ app.use(helmet());
 // csp middleware
 app.use(csp({
   directives: {
-    styleSrc: ["/styles/base.css", "/styles/hamburgers.min.css", "/styles/style.css"],
     fontSrc: ["https://fonts.google.com/"],
-    imgSrc: ["images/"],
     upgradeInsecureRequests: true,
     workerSrc: false
   },
