@@ -3,23 +3,38 @@ const express = require("express"),
   mongoose = require("mongoose"),
   session = require("express-session"),
   MongoStore = require("connect-mongo")(session),
+  helmet = require("helmet"),
+  expiryDate = new Date(Date.now() + 60 * 60 * 1000),
   PORT = process.env.PORT || 3000,
   app = express();
 
+// helmet
+app.use(helmet());
+
 // mongodb connection
-mongoose.connect(process.env.MONGODB_URI || "mongodb://0.0.0.0/wino");
 const db = mongoose.connection;
+mongoose.connect(process.env.MONGODB_URI || "mongodb://0.0.0.0/wino", {
+  useNewUrlParser: true,
+  useCreateIndex: true
+});
 // mongo error
 db.on("error", console.error.bind(console, "connection error:"));
 
 // Use sessions for tracking logins
+app.set("trust proxy", 1);
 app.use(session({
   secret: "Matt loves you",
+  name: "sessionId",
   resave: true,
   saveUninitialized: false,
   store: new MongoStore({
     mongooseConnection: db
-  })
+  }),
+  cookie: {
+    secure: true,
+    httpOnly: true,
+    maxAge: expiryDate
+  }
 }));
 
 // Make user ID available in templates
