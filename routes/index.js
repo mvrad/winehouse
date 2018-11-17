@@ -1,7 +1,7 @@
 const express = require("express"),
   router = express.Router(),
   User = require("../models/user"),
-  mid = require("../bin/middleware");
+  mid = require("../routes/middleware.js");
 
 // GET /collection
 router.get("/collection", function(req, res, next) {

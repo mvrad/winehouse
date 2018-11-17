@@ -70,10 +70,10 @@ app.use(express.static(__dirname + "/public"));
 
 // View engine setup
 app.set("view engine", "pug");
-app.set("views", __dirname + "/public/views");
+app.set("views", __dirname + "/views");
 
 // Include routes
-const routes = require("./lib/routes/index");
+const routes = require("./routes/index");
 app.use("/", routes);
 
 // Catch 404 and forward to error handler
