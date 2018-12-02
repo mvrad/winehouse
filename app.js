@@ -10,10 +10,10 @@ const express = require("express"),
   PORT = process.env.PORT || 3000,
   app = express();
 
-// helmet
+// Helmet
 app.use(helmet());
 
-// csp middleware
+// CSP middleware
 app.use(csp({
   directives: {
     upgradeInsecureRequests: true,
@@ -26,16 +26,26 @@ app.use(csp({
   browserSniff: true
 }));
 
-// referrer policy
+// Referrer policy
 app.use(referrerPolicy());
 
-// mongodb connection
+// Feature policy
+app.use(helmet.featurePolicy({
+  features: {
+    fullscreen: ["'self'"],
+    vibrate: ["'none'"],
+    payment: ['example.com'],
+    syncXhr: ["'none'"]
+  }
+}))
+
+// MongoDB connection
 const db = mongoose.connection;
 mongoose.connect(process.env.MONGODB_URI || "mongodb://0.0.0.0/wino", {
   useNewUrlParser: true,
   useCreateIndex: true
 });
-// mongo error
+// Mongo error
 db.on("error", console.error.bind(console, "connection error:"));
 
 // Use sessions for tracking logins
