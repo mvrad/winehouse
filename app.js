@@ -32,12 +32,9 @@ app.use(referrerPolicy());
 // Feature policy
 app.use(helmet.featurePolicy({
   features: {
-    fullscreen: ["'self'"],
-    vibrate: ["'none'"],
-    payment: ['example.com'],
     syncXhr: ["'none'"]
   }
-}))
+}));
 
 // MongoDB connection
 const db = mongoose.connection;
