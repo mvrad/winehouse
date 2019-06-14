@@ -18,7 +18,7 @@
     <img src="https://securityheadersiobadges.azurewebsites.net/create/badge?domain=https://winoapp.herokuapp.com" alt="Security Header Grade">
   </a>
   <a href="https://twitter.com/intent/follow?screen_name=mc0nrad">
-    <img src="https://img.shields.io/twitter/follow/travelstar.svg?label=Follow%20@mc0nrad" alt="Follow @mc0nrad">
+    <img src="https://img.shields.io/twitter/follow/wino.svg?label=Follow%20@mc0nrad" alt="Follow @mc0nrad">
   </a>
 </p>
 
