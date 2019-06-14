@@ -12,7 +12,7 @@
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="TravelStar is released under the MIT license.">
   </a>
   <a href="https://circleci.com/gh/matthew-conrad/wino">
-    <img src="https://circleci.com/gh/matthew-conrad/travelstar.svg?style=shield" alt="Current CircleCI build status.">
+    <img src="https://circleci.com/gh/matthew-conrad/wino.svg?style=shield" alt="Current CircleCI build status.">
   </a>
   <a href="https://securityheaders.io/?q=https://winoapp.herokuapp.com&hide=on&followRedirects=on">
     <img src="https://securityheadersiobadges.azurewebsites.net/create/badge?domain=https://winoapp.herokuapp.com" alt="Security Header Grade">
