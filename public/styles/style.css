@@ -314,6 +314,8 @@ input[type="radio"] {
 
   #navbar-lg {
     display: block;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   /* Typography */
@@ -336,7 +338,7 @@ input[type="radio"] {
     font-size: 1.3em;
     font-weight: 400;
     color: #000;
-    padding: 20px 15px;
+    padding: 17.5px 15px;
   }
 
   a:hover {
@@ -381,11 +383,9 @@ input[type="radio"] {
   .container {
     display: flex;
     flex-direction: row;
-    flex-wrap: none;
     justify-content: center;
     align-items: center;
     height: 60px;
-    margin: 0 15%;
   }
 
   .flex-grow {
