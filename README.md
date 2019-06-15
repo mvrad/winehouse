@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://travelstar.herokuapp.com">
+  <a href="https://winoapp.herokuapp.com">
     <img alt="Gatsby" src="public\images\wino.svg" width="204" />
   </a>
 </p>
