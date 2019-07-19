@@ -8,11 +8,11 @@
   <h3>Track your wine collection, see its values, and keep notes on taste and food pairing suggestions.</h3>
 </div>
 <p align="center">
-  <a href="https://github.com/matthew-conrad/wino/blob/master/LICENSE">
+  <a href="https://github.com/mvrad/wino/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="TravelStar is released under the MIT license.">
   </a>
-  <a href="https://circleci.com/gh/matthew-conrad/wino">
-    <img src="https://circleci.com/gh/matthew-conrad/wino.svg?style=shield" alt="Current CircleCI build status.">
+  <a href="https://circleci.com/gh/mvrad/wino">
+    <img src="https://circleci.com/gh/mvrad/wino.svg?style=shield" alt="Current CircleCI build status.">
   </a>
   <a href="https://securityheaders.io/?q=https://winoapp.herokuapp.com&hide=on&followRedirects=on">
     <img src="https://securityheadersiobadges.azurewebsites.net/create/badge?domain=https://winoapp.herokuapp.com" alt="Security Header Grade">
@@ -42,7 +42,7 @@ You can take all the files of this site and run them on your computer as if it w
 
 To copy the repository's files from here onto your computer and to view and serve those files locally, at your computer's command line type:
 ```
-git clone https://github.com/matthew-conrad/wino.git
+git clone https://github.com/mvrad/wino.git
 ```
 Open the files in a text editor such as [Visual Studio Code](https://code.visualstudio.com/) and in the terminal type:
 ```bash
