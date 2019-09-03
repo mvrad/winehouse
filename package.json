@@ -1,5 +1,5 @@
 {
-  "name": "wino",
+  "name": "wine-house",
   "version": "1.0.0",
   "engines": {
     "node": "8.11.3"
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mvrad/wino.git"
+    "url": "git+https://github.com/mvrad/wine-house.git"
   },
   "keywords": [
     "wine",
@@ -30,7 +30,7 @@
   "author": "Matthew Conrad",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mvrad/wino/issues"
+    "url": "https://github.com/mvrad/wine-house/issues"
   },
   "homepage": "https://winoapp.herokuapp.com",
   "dependencies": {
