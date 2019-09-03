@@ -24,46 +24,60 @@ $(() => {
   $("#search-form input").focus();
 
   // Wine search (powered by Snooth API)
-  $("#search").keyup((e) => {
+  function conductSearch () {
+    $("#search").keyup((e) => {
 
-    let search = $("#search").val().toLowerCase().trim(),
-      value = $.trim($("#search").val());
+      let search = $("#search").val().toLowerCase().trim(),
+        value = $.trim($("#search").val());
 
-    if (value.length > 0) {
+      if (value.length > 0) {
 
-      let searching = snoothAPI + search;
+        let searching = snoothAPI + search;
 
-      $(".search-dropdown").addClass("is-active");
+        $(".search-dropdown").addClass("is-active");
+        $(".is-active").show();
 
-      // Get Snooth API
-      $.getJSON(searching, (data) => {
+        // Get Snooth API
+        $.getJSON(searching, (data) => {
 
-        let wines = data.wines;
+          let wines = data.wines;
 
-        $.each(wines, (i) => {
-          let code = wines[0].code,
-            name = wines[0].name,
-            varietal = wines[0].varietal,
-            vintage = wines[0].vintage,
-            type = wines[0].type,
-            price = wines[0].price;
+          $.each(wines, (i) => {
+            let code = wines[0].code,
+              name = wines[0].name,
+              varietal = wines[0].varietal,
+              vintage = wines[0].vintage,
+              type = wines[0].type,
+              price = wines[0].price;
 
-          $("#name").html(name);
-          $("#varietal").html(varietal);
-          $("#vintage").html(vintage);
-          $("#type").html(type);
-          $("#price").html("$" + price);
-          $("#code").html(code);
+            $("#name").html(name);
+            $("#varietal").html(varietal);
+            $("#vintage").html(vintage);
+            $("#type").html(type);
+            $("#price").html("$" + price);
+            $("#code").html(code);
 
-        }); // End wine arr
+          }); // End wine arr
 
-      }); // End getJSON
+        }); // End getJSON
 
-    } else {
-      $(".search-dropdown").removeClass("is-active");
-    }
+      }
 
-  }); // End keyup event
+    }); // End keyup event
+  }
+
+  conductSearch();
+
+  // Hide search results
+  $(document).click(() => {
+    $(".is-active").hide();
+  });
+  $(".search-dropdown").click((e) => {
+    e.stopPropagation();
+  });
+  $("#search").click((e) => {
+    e.stopPropagation();
+  });
 
   // Preload images
   function preload(arrayOfImages) {

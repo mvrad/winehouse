@@ -22,20 +22,14 @@ nav#navbar-sm
         a(href="login") Sign In
 //- Nav Tablet/Desktop
 nav#navbar-lg
-  if !currentUser
   ul.container
     img#wino-logo(src="../images/wino.svg" alt="Wino Logo")
     .flex-grow
-
-    if currentUser
-      li.item
-        a(href="/logout") Logout
-    else
-      li.item
-        a(href="/") Home
-      li.item
-        a(href="about") About
-      li.item
-        a(href="register") Sign Up
-      li.item
-        a(href="login") Sign In
+    li.item
+      a(href="/") Home
+    li.item
+      a(href="about") About
+    li.item
+      a(href="register") Sign Up
+    li.item
+      a(href="login") Sign In

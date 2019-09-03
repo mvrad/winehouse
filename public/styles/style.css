@@ -1,19 +1,16 @@
 /* Base Styles */
 
-.header-home {
+body {
   background: linear-gradient(rgba(0, 0, 0, 0.5),
   rgba(0, 0, 0, 0.5)),
-  url("../images/main.jpg") no-repeat center/auto;
-  height: 200vh;
-  position: relative;
+  url("../images/main.jpg") no-repeat center/cover;
+  height: 100vh;
   align-items: center;
 }
 
 .header {
   width: auto;
   text-align: center;
-
-  margin-top: -295px;
 }
 
 .header-content {
@@ -23,7 +20,7 @@
 }
 
 #register-home {
-  height: 200vh;
+  height: 100vh;
 }
 
 /* Typography */
@@ -297,9 +294,7 @@ input[type="radio"] {
   /* Base Styles */
 
   .header-home, #register-home {
-    background-size: cover;
-    height: calc(100vh - 60px);
-    margin: 0;
+    height: calc(100vh - 160px);
   }
 
   /* Nav */
@@ -333,17 +328,29 @@ input[type="radio"] {
     margin-top: 0;
   }
 
-  .item a, h4 {
+  .item a, h4, .logout a {
     font-family: "Fira Sans", sans-serif;
     font-size: 1.3em;
     font-weight: 400;
-    color: #000;
     padding: 17.5px 15px;
   }
 
-  a:hover {
-    background-color: #808080;
+  .item a, .logout a {
     color: #fff;
+    text-shadow: 2px 2px 4px #000;
+  }
+
+  h4 {
+    color: #fff;
+  }
+
+  .logout {
+    margin-top: 50px;
+  }
+
+  a:hover {
+    color: #1e90ff;
+    transition: 0.3s;
   }
 
   #main-title-sm {
@@ -353,12 +360,12 @@ input[type="radio"] {
   #main-title-lg {
     font-size: 5rem;
     display: block;
-    padding: 240px 0 20px;
+    padding: 140px 0 20px;
     margin: 0 auto;
   }
 
   .title {
-    padding-top: 240px;
+    padding-top: 140px;
   }
 
   .title-raised {
@@ -375,17 +382,12 @@ input[type="radio"] {
 
   /* Nav Bar */
 
-  nav {
-    background: #fff;
-    height: 60px;
-  }
-
   .container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 160px;
   }
 
   .flex-grow {
@@ -395,7 +397,8 @@ input[type="radio"] {
   /* Images */
 
   #wino-logo {
-    width: 160px;
+    width: 120px;
+    height: auto;
   }
 
   /* Modules */
@@ -409,6 +412,7 @@ input[type="radio"] {
   #edit-btn:hover {
     cursor: pointer;
     background-color: #0f487f;
+    transition: 0.4s;
   }
 
   /* Registration Form */
@@ -433,17 +437,24 @@ input[type="radio"] {
     grid-template-areas:
       "sidebar main";
   }
-  
+
   .left-panel {
     background: #fff url("../images/collection.jpg") no-repeat center/cover;
     border: 10px solid #000;
-    height: calc(100vh - 60px);
+    height: calc(100vh);
     overflow: auto;
   }
   
   .left-panel h2, .right-panel h2 {
     color: #fff;
     text-shadow: 2px 2px 4px #000;
+  }
+
+  .right-panel {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas:
+      "main sidebar";
   }
 
   .right-panel h2 {

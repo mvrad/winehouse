@@ -10,7 +10,7 @@ router.get("/collection", function(req, res, next) {
       if (error) {
         return next(error);
       } else {
-        return res.render("collection", { title: "Collection"});
+        return res.render("collection", { title: "Collection", path: req.path });
       }
     });
 });
@@ -31,7 +31,7 @@ router.get("/logout", function(req, res, next) {
 
 // GET /login
 router.get("/login", mid.loggedOut, function(req, res, next) {
-  return res.render("login", { title: "Log In"});
+  return res.render("login", { title: "Log In" });
 });
 
 // POST /login
