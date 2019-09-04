@@ -56,13 +56,11 @@ $(() => {
             $("#type").html(type);
             $("#price").html("$" + price);
             $("#code").html(code);
-
           }); // End wine arr
-
         }); // End getJSON
-
-      }
-
+    } else {
+      $(".search-dropdown").removeClass("is-active");
+    }
     }); // End keyup event
   }
 
