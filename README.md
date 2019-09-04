@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://winoapp.herokuapp.com">
-    <img alt="Gatsby" src="public\images\wino-red.svg" width="180px" />
+    <img alt="Logo" src="public\images\wino-red.svg" width="180px" />
   </a>
 </p>
 <div align="center">
