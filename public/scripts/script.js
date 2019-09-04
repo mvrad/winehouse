@@ -68,17 +68,6 @@ $(() => {
 
   conductSearch();
 
-  // Hide search results
-  $(document).click(() => {
-    $(".is-active").hide();
-  });
-  $(".search-dropdown").click((e) => {
-    e.stopPropagation();
-  });
-  $("#search").click((e) => {
-    e.stopPropagation();
-  });
-
   // Preload images
   function preload(arrayOfImages) {
     $(arrayOfImages).each(function(){
