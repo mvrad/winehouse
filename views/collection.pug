@@ -20,8 +20,6 @@ block content
             .search-dropdown
               ul.search-dropdown-list
                 li
-                  #image.list-item
-                li
                   span.labels Name: 
                   #name.list-item
                   button.dropdown-edit Edit
@@ -41,18 +39,18 @@ block content
                   span.labels Price: 
                   #price.list-item
                   button.dropdown-edit Edit
-                //- li
-                //-   span.labels Choose Color:
-                //- li.search-dropdown-list__image
-                //-   div.image-selection
-                //-     img(src="images/red.svg" class="wine-glass")
-                //-     input(type="radio" name="color" value="red")
-                //-   div.image-selection
-                //-     img(src="images/rose.svg" class="wine-glass")
-                //-     input(type="radio" name="color" value="rose")
-                //-   div.image-selection
-                //-     img(src="images/white.svg" class="wine-glass")
-                //-     input(type="radio" name="color" value="white")
+                li
+                  span.labels Choose Color:
+                li.search-dropdown-list__image
+                  div.image-selection
+                    img(src="images/red.svg" class="wine-glass")
+                    input(type="radio" name="color" value="red")
+                  div.image-selection
+                    img(src="images/rose.svg" class="wine-glass")
+                    input(type="radio" name="color" value="rose")
+                  div.image-selection
+                    img(src="images/white.svg" class="wine-glass")
+                    input(type="radio" name="color" value="white")
                 li#code.search-dropdown-list__code
                 button#add-to-collection Add To Collection
           div.logout
