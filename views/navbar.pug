@@ -1,25 +1,3 @@
-//- Nav Mobile
-nav#navbar-sm
-  button#hamburger.hamburger.hamburger--3dx
-    span.hamburger-box
-      span.hamburger-inner
-  img#wino-logo-sm(src="../images/wino.svg" alt="Wino Logo small")
-.mobile-menu__nav
-  if !currentUser
-  ul.mobile-menu__dropdown
-
-    if currentUser
-      li.item
-        a(href="/logout") Logout
-    else
-      li.item
-        a(href="/") Home
-      li.item
-        a(href="about") About
-      li.item
-        a(href="register") Sign Up
-      li.item
-        a(href="login") Sign In
 //- Nav Tablet/Desktop
 nav#navbar-lg
   ul.container
