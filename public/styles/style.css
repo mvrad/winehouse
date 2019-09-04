@@ -58,7 +58,7 @@ p {
 }
 
 #main-title-sm, .title, .title-raised {
-  display: block;
+  display: none;
   padding-top: 100px;
   margin-top: 0;
 }
@@ -70,6 +70,7 @@ p {
 /* Containers */
 
 .main-container {
+  display: none;
   padding-bottom: 23px;
   margin: 0 20px;
 }
@@ -86,13 +87,14 @@ p {
 /* Nav */
 
 #navbar-sm {
-  display: flow-root;
+  display: none;
   background-color: #fff;
   width: 100%;
   height: 60px;
 }
 
 .mobile-menu__dropdown {
+  display: none;
   background-color: #fff;
   width: 100%;
   height: 295px;
@@ -292,6 +294,10 @@ input[type="radio"] {
 @media (min-width: 824px) {
 
   /* Base Styles */
+
+  .main-container {
+    display: block;
+  }
 
   .header-home, #register-home {
     height: calc(100vh - 160px);

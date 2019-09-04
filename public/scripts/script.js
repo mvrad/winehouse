@@ -6,18 +6,6 @@ $(() => {
   const akey = config.KEY,
     snoothAPI = "//api.snooth.com/wines/?akey=" + akey + "&q=";
 
-  // Hamburger menu animation
-  $(".hamburger").on("click", () => {
-    $(".hamburger").toggleClass("is-active");
-    if ($(".hamburger").hasClass("is-active")) {
-      $(".header").animate({marginTop: "0"})
-      $(".register").animate({marginTop: "0"})
-    } else {
-      $(".header").animate({marginTop: "-295px"})
-      $(".register").animate({marginTop: "-295px"})
-    }
-  });
-
   // Set focus to fields
   $("#name").focus();
   $("#login-email input").focus();
@@ -41,15 +29,18 @@ $(() => {
         $.getJSON(searching, (data) => {
 
           let wines = data.wines;
+          console.log(wines);
 
           $.each(wines, (i) => {
             let code = wines[0].code,
+              img = "<img src=" + wines[0].image + ">",
               name = wines[0].name,
               varietal = wines[0].varietal,
               vintage = wines[0].vintage,
               type = wines[0].type,
               price = wines[0].price;
 
+            $("#image").html(img);
             $("#name").html(name);
             $("#varietal").html(varietal);
             $("#vintage").html(vintage);
@@ -98,7 +89,8 @@ $(() => {
 
   // Add wine to collection
   $("#add-to-collection").on("click", () => {
-    let img = $("input[name=color]:checked").val(),
+    // let img = $("input[name=color]:checked").val(),
+    let img = $("#image img").attr("src"),
       name = $("#name").text(),
       varietal = $("#varietal").text(),
       vintage = $("#vintage").text(),
@@ -107,9 +99,11 @@ $(() => {
       code = $("#code").text(),
       modalWindow = "";
 
+    // <img class=wine-img src=images/${img}.svg title=Color>
+
     $(".collection-main").append(
       `<div class=collection-wine>
-      <img class=wine-img src=images/${img}.svg title=Color>
+      <img class=wine-img src=${img} title=Image>
       <div class=collection-name>
       <span class=wine-name title=Name>${name}</span>
       </div>
@@ -127,6 +121,7 @@ $(() => {
     modalWindow += "<div class=modal-content id=" + code + ">";
     modalWindow += "<ul>";
     modalWindow += "<span class=close>&times</span><br>";
+    modalWindow += "<li><img src=" + img + "></img>";
     modalWindow += "<li><span class=modal-label>Name: </span><span class=modal-html>" + name + "</span>";
     modalWindow += "<li><span class=modal-label>Varietal: </span><span class=modal-html>" + varietal + "</span>";
     modalWindow += "<li><span class=modal-label>Vintage: </span><span class=modal-html>" + vintage + "</span>";
