@@ -13,14 +13,17 @@ body {
   text-align: center;
 }
 
+.header-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100vh - 160px);
+}
+
 .header-content {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#register-home {
-  height: 100vh;
 }
 
 /* Typography */
@@ -72,6 +75,7 @@ p {
 /* Containers */
 
 .main-container {
+  display: none;
   margin: 0;
 }
 
@@ -291,7 +295,7 @@ input[type="radio"] {
 
 /* Breakpoints */
 
-@media (min-width: 824px) {
+@media (min-width: 1024px) {
 
   /* Base Styles */
 
@@ -303,7 +307,7 @@ input[type="radio"] {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: calc(100% - 360px);
+    height: calc(100% - 320px);
   }
 
   /* Nav */
