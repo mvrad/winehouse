@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://winoapp.herokuapp.com">
-    <img alt="Logo" src="public\images\wino-red.svg" width="180px" />
+    <img alt="Logo" src="public/images/wino-red.svg" width="180px" />
   </a>
 </p>
 <div align="center">
@@ -22,6 +22,12 @@
 ## About Wine House
 
 Wine House is a wine cellar management app that lets you track your collection and see its values as well as keep tasting notes and food pairing suggestions.
+
+## App Preview
+
+<div align="center">
+  <img alt="TravelStar App Preview" src="public/images/wine-house_min.gif" width="auto" height="auto">
+</div>
 
 ## Under the Hood
 
