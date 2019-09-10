@@ -26,7 +26,7 @@ Wine House is a wine cellar management app that lets you track your collection a
 ## App Preview
 
 <div align="center">
-  <img alt="TravelStar App Preview" src="public/images/wine-house_min.gif" width="auto" height="auto">
+  <img alt="TravelStar App Preview" src="public/images/wine-house.gif" width="auto" height="auto">
 </div>
 
 ## Under the Hood
