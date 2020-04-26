@@ -2,7 +2,7 @@
   "name": "wine-house",
   "version": "1.0.0",
   "engines": {
-    "node": "8.11.3"
+    "node": "12.16.2"
   },
   "description": "A wine cellar management app that lets you track your collection and see its values as well as keep tasting notes and food pairing suggestions.",
   "main": "app.js",
@@ -34,17 +34,17 @@
   },
   "homepage": "https://winoapp.herokuapp.com",
   "dependencies": {
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^3.0.8",
     "body-parser": "^1.19.0",
     "connect-mongo": "^3.2.0",
     "express": "^4.17.1",
-    "express-session": "^1.17.0",
-    "helmet": "^3.21.2",
-    "helmet-csp": "^2.9.4",
+    "express-session": "^1.17.1",
+    "helmet": "^3.22.0",
+    "helmet-csp": "^2.10.0",
     "hoek": "^5.0.4",
-    "mongoose": "^5.8.3",
+    "mongoose": "^5.9.10",
     "nodemon": "^1.19.4",
-    "npm": "^6.13.4",
+    "npm": "^6.14.4",
     "pug": "^2.0.3",
     "referrer-policy": "^1.2.0",
     "update": "^0.7.4"
