@@ -14,9 +14,6 @@
   <a href="https://circleci.com/gh/mvrad/wine-house">
     <img src="https://circleci.com/gh/mvrad/wine-house.svg?style=shield" alt="Current CircleCI build status.">
   </a>
-  <a href="https://img.shields.io/security-headers?url=https%3A%2F%2Fwinoapp.herokuapp.com">
-    <img src="https://img.shields.io/security-headers?url=https%3A%2F%2Fwinoapp.herokuapp.com" alt="Security Header Grade">
-  </a>
 </p>
 
 ## About Wine House
