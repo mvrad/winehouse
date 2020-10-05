@@ -34,23 +34,23 @@
   },
   "homepage": "https://winoapp.herokuapp.com",
   "dependencies": {
-    "bcrypt": "^3.0.8",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "connect-mongo": "^3.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
-    "helmet": "^3.22.0",
+    "helmet": "^3.23.3",
     "helmet-csp": "^2.10.0",
     "hoek": "^5.0.4",
-    "mongoose": "^5.9.10",
-    "nodemon": "^1.19.4",
-    "npm": "^6.14.4",
+    "mongoose": "^5.10.7",
+    "nodemon": "^2.0.4",
+    "npm": "^6.14.8",
     "pug": "^2.0.3",
     "referrer-policy": "^1.2.0",
     "update": "^0.7.4"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^8.1.3"
   }
 }
