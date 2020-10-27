@@ -54,10 +54,10 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+# .env
 
 # package-lock.json
 package-lock.json
 
 .DS_store
-config.js
+# config.js
