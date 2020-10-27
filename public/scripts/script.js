@@ -104,7 +104,7 @@ $(() => {
       <div class=collection-varietal>
       <span class=wine-varietal title=Varietal>${varietal}</span></div>
       <div class=options>
-      <img class=wine-note id=${code} src=images/note.svg title=Notes>
+      <img class=wine-note src=images/note.svg title=Notes>
       <img class=wine-delete src=images/remove.svg title=Remove>
       </div>
       </div>

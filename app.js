@@ -38,7 +38,7 @@ app.use(helmet.featurePolicy({
 
 // MongoDB connection
 const db = mongoose.connection;
-mongoose.connect(process.env.MONGODB_URL || "mongodb://0.0.0.0/wino", {
+mongoose.connect("mongodb+srv://dbUser:dbUserPassword@cluster0.mwr2r.mongodb.net/winehouse?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useCreateIndex: true
 });
