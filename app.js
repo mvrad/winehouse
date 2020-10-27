@@ -38,7 +38,7 @@ app.use(helmet.featurePolicy({
 
 // MongoDB connection
 const db = mongoose.connection;
-mongoose.connect(process.env.MONGODB_URI || "mongodb://0.0.0.0/wino", {
+mongoose.connect(process.env.MONGODB_URL || "mongodb://0.0.0.0/wino", {
   useNewUrlParser: true,
   useCreateIndex: true
 });
