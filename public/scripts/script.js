@@ -96,13 +96,14 @@ $(() => {
 
   // Add wine to collection
   $("#add-to-collection").on("click", () => {
+    $("#code").html(makeId(5));
     let img = $("input[name=color]:checked").val(),
       name = $("#name").text(),
       varietal = $("#varietal").text(),
       vintage = $("#vintage").text(),
       type = $("#type").text(),
       price = $("#price").text(),
-      code = makeId(5),
+      code = $("#code").text(),
       modalWindow = "";
 
       console.log(code);
@@ -143,7 +144,6 @@ $(() => {
     // Modal window
     let modalDiv = $(".modal-content");
     $(".collection-main").on("click", ".wine-note", (e) => {
-      console.log(e.currentTarget.id);
       $.each(modalDiv, (i) => {
         if (e.currentTarget.id === modalDiv[i].id) {
           $(".modal").html(modalDiv[i]).show();
