@@ -125,19 +125,19 @@ $(() => {
     );
 
     // Add wine to modal window
-    modalWindow + "<div class=modal-content id=" + code + ">";
-    modalWindow + "<ul>";
-    modalWindow + "<span class=close>&times</span><br>";
-    modalWindow + "<li><span class=modal-label>Name: </span><span class=modal-html>" + name + "</span>";
-    modalWindow + "<li><span class=modal-label>Varietal: </span><span class=modal-html>" + varietal + "</span>";
-    modalWindow + "<li><span class=modal-label>Vintage: </span><span class=modal-html>" + vintage + "</span>";
-    modalWindow + "<li><span class=modal-label>Type: </span><span class=modal-html>" + type + "</span>";
-    modalWindow + "<li><span class=modal-label>Price: </span><span class=modal-html>" + price + "</span>";
-    modalWindow + "<li><span class=modal-label>Tasting Notes: </span></li>";
-    modalWindow + "<textarea id=notes></textarea>";
-    modalWindow + "<button id=save-btn>Save</button>";
-    modalWindow + "</ul>";
-    modalWindow + "</div>";
+    modalWindow += "<div class=modal-content id=" + code + ">";
+    modalWindow += "<ul>";
+    modalWindow += "<span class=close>&times</span><br>";
+    modalWindow += "<li><span class=modal-label>Name: </span><span class=modal-html>" + name + "</span>";
+    modalWindow += "<li><span class=modal-label>Varietal: </span><span class=modal-html>" + varietal + "</span>";
+    modalWindow += "<li><span class=modal-label>Vintage: </span><span class=modal-html>" + vintage + "</span>";
+    modalWindow += "<li><span class=modal-label>Type: </span><span class=modal-html>" + type + "</span>";
+    modalWindow += "<li><span class=modal-label>Price: </span><span class=modal-html>" + price + "</span>";
+    modalWindow += "<li><span class=modal-label>Tasting Notes: </span></li>";
+    modalWindow += "<textarea id=notes></textarea>";
+    modalWindow += "<button id=save-btn>Save</button>";
+    modalWindow += "</ul>";
+    modalWindow += "</div>";
 
     $(".modal").html(modalWindow).hide();
 
@@ -145,7 +145,7 @@ $(() => {
     let modalDiv = $(".modal-content");
     $(".collection-main").on("click", ".wine-note", (e) => {
       $.each(modalDiv, (i) => {
-        if (e.currentTarget.id == modalDiv[i].id) {
+        if (e.currentTarget.id === modalDiv[i].id) {
           $(".modal").html(modalDiv[i]).show();
           $(".close").click((e) => {
             $(".modal").html(modalWindow).hide();
