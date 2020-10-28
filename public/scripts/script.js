@@ -94,6 +94,8 @@ $(() => {
       price = $("#price").text(),
       code = 1 + Math.floor(Math.random() * 9999),
       modalWindow = "";
+    
+    console.log(code);
 
     $(".collection-main").append(
       `<div class=collection-wine>
@@ -132,7 +134,7 @@ $(() => {
     let modalDiv = $(".modal-content");
     $(".collection-main").on("click", ".wine-note", (e) => {
       $.each(modalDiv, (i) => {
-        if (e.currentTarget.id = modalDiv[i].id) {
+        if (e.currentTarget.id === modalDiv[i].id) {
           $(".modal").html(modalDiv[i]).show();
           $(".close").click((e) => {
             $(".modal").html(modalWindow).hide();
