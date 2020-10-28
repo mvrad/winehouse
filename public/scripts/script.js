@@ -95,6 +95,8 @@ $(() => {
       code = (1 + Math.floor(Math.random() * 9999)).toString,
       modalWindow = "";
 
+      console.log(code);
+
     $(".collection-main").append(
       `<div class=collection-wine>
       <img class=wine-img src=images/${img}.svg title=Color>
