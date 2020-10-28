@@ -125,22 +125,23 @@ $(() => {
 
     // Add wine to modal window
     $(".modal").append(
-      `<div class=modal-content id=" + ${code} + ">"
-      modalWindow += "<ul>"
-      modalWindow += "<span class=close>&times</span><br>"
-      modalWindow += "<li><span class=modal-label>Name: </span><span class=modal-html>" + ${name} + "</span>"
-      modalWindow += "<li><span class=modal-label>Varietal: </span><span class=modal-html>" + ${varietal} + "</span>"
-      modalWindow += "<li><span class=modal-label>Vintage: </span><span class=modal-html>" + ${vintage} + "</span>"
-      modalWindow += "<li><span class=modal-label>Type: </span><span class=modal-html>" + ${type} + "</span>"
-      modalWindow += "<li><span class=modal-label>Price: </span><span class=modal-html>" + ${price} + "</span>"
-      modalWindow += "<li><span class=modal-label>Tasting Notes: </span></li>"
-      modalWindow += "<textarea id=notes></textarea>"
-      modalWindow += "<button id=save-btn>Save</button>"
+      `<div class=modal-content id=${code}>
+      <ul>
+      <span class=close>&times</span>
+      <br>
+      <li><span class=modal-label>Name: </span><span class=modal-html>${name}</span>
+      <li><span class=modal-label>Varietal: </span><span class=modal-html>${varietal}</span>
+      <li><span class=modal-label>Vintage: </span><span class=modal-html>${vintage}</span>
+      <li><span class=modal-label>Type: </span><span class=modal-html>${type}</span>
+      <li><span class=modal-label>Price: </span><span class=modal-html>${price}</span>
+      <li><span class=modal-label>Tasting Notes: </span></li>
+      <textarea id=notes></textarea>
+      <button id=save-btn>Save</button>
       </ul>
       </div>`
     );
 
-    $(".modal").html(modalWindow).hide();
+    $(".modal").hide();
 
     // Modal window
     let modalDiv = $(".modal-content");
