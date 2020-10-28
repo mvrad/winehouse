@@ -12,18 +12,18 @@ $(() => {
   $("#search-form input").focus();
 
   // Wine search (powered by Snooth API)
-  // function conductSearch () {
-  //   $("#search").keyup((e) => {
+  function conductSearch () {
+    $("#search").keyup((e) => {
 
-  //     let search = $("#search").val().toLowerCase().trim(),
-  //       value = $.trim($("#search").val());
+      let search = $("#search").val().toLowerCase().trim(),
+        value = $.trim($("#search").val());
 
-  //     if (value.length > 0) {
+      if (value.length > 0) {
 
   //       let searching = snoothAPI + search;
 
-  //       $(".search-dropdown").addClass("is-active");
-  //       $(".is-active").show();
+        $(".search-dropdown").addClass("is-active");
+        $(".is-active").show();
 
   //       // Get Snooth API
   //       $.getJSON(searching, (data) => {
@@ -46,13 +46,13 @@ $(() => {
   //           $("#code").html(code);
   //         }); // End wine arr
   //       }); // End getJSON
-  //   } else {
-  //     $(".search-dropdown").removeClass("is-active");
-  //   }
-  //   }); // End keyup event
-  // }
+    } else {
+      $(".search-dropdown").removeClass("is-active");
+    }
+    }); // End keyup event
+  }
 
-  // conductSearch();
+  conductSearch();
 
   // Preload images
   function preload(arrayOfImages) {
