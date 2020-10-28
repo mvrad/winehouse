@@ -3,8 +3,8 @@ $(() => {
   "use strict";
 
   // Globals
-  const akey = config.KEY,
-    snoothAPI = "//api.snooth.com/wines/?akey=" + akey + "&q=";
+  // const akey = config.KEY,
+  //   snoothAPI = "//api.snooth.com/wines/?akey=" + akey + "&q=";
 
   // Set focus to fields
   $("#name").focus();
@@ -52,7 +52,7 @@ $(() => {
     }); // End keyup event
   }
 
-  conductSearch();
+  // conductSearch();
 
   // Preload images
   function preload(arrayOfImages) {
