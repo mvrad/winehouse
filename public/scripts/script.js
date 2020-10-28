@@ -92,7 +92,7 @@ $(() => {
       vintage = $("#vintage").text(),
       type = $("#type").text(),
       price = $("#price").text(),
-      code = $("#code").text(),
+      code = 1 + Math.floor(Math.random() * 9999),
       modalWindow = "";
 
     $(".collection-main").append(
