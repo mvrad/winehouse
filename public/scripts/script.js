@@ -68,6 +68,16 @@ $(() => {
     "images/remove.svg"
   ]);
 
+  function makeId(length) {
+    let result = "",
+      chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+      charLength = chars.length;
+    for (let i = 0; i < length; i++) {
+      result += chars.charAt(Math.floor(Math.random() * charLength));
+    }
+    return result;
+  }
+
   // Edit, save input fields
   $(document).on("click", ".dropdown-edit", (e) => {
     const saveBtn = "<button class=dropdown-save>Save</button>",
@@ -92,7 +102,7 @@ $(() => {
       vintage = $("#vintage").text(),
       type = $("#type").text(),
       price = $("#price").text(),
-      code = 1 + Math.floor(Math.random() * 9999).toString,
+      code = makeId(5),
       modalWindow = "";
 
       console.log(code);
@@ -134,7 +144,7 @@ $(() => {
     let modalDiv = $(".modal-content");
     $(".collection-main").on("click", ".wine-note", (e) => {
       $.each(modalDiv, (i) => {
-        if (e.currentTarget.id == modalDiv[i].id) {
+        if (e.currentTarget.id === modalDiv[i].id) {
           $(".modal").html(modalDiv[i]).show();
           $(".close").click((e) => {
             $(".modal").html(modalWindow).hide();
