@@ -543,7 +543,7 @@ input[type="radio"] {
   }
 
   .search-dropdown {
-    display: none;
+    /* display: none; */
     width: 500px;
     height: auto;
     font-size: 1.125em;
