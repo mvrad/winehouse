@@ -146,8 +146,8 @@ $(() => {
     // Modal window
     let modalDiv = $(".modal-content");
     $(".collection-main").on("click", ".wine-note", (e) => {
+      console.log(e.currentTarget.id);
       $.each(modalDiv, (i) => {
-        console.log(e.currentTarget.id);
         if (e.currentTarget === modalDiv[i].id) {
           $(".modal").html(modalDiv[i]).show();
           $(".close").click((e) => {
