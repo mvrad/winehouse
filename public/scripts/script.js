@@ -108,7 +108,7 @@ $(() => {
       console.log(code);
 
     $(".collection-main").append(
-      `<div class=collection-wine>
+      `<div class=collection-wine id=${code}>
       <img class=wine-img src=images/${img}.svg title=Color>
       <div class=collection-name>
       <span class=wine-name title=Name>${name}</span>
