@@ -146,7 +146,7 @@ $(() => {
     // Modal window
     let modalDiv = $(".modal-content");
     $(".wine-note").on("click", (e) => {
-      console.log($(this).attr("id"));
+      console.log(e.target.attr("id"));
       $.each(modalDiv, (i) => {
         if (e.currentTarget.id === modalDiv[i].id) {
           $(".modal").html(modalDiv[i]).show();
