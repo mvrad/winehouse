@@ -145,10 +145,10 @@ $(() => {
 
     // Modal window
     let modalDiv = $(".modal-content");
-    $(".wine-note").on("click", (e) => {
-      console.log(e.target.attr("id"));
+    $(".collection-main").on("click", ".wine-note", (e) => {
+      console.log(e.target.id);
       $.each(modalDiv, (i) => {
-        if (e.currentTarget.id === modalDiv[i].id) {
+        if (e.target.id === modalDiv[i].id) {
           $(".modal").html(modalDiv[i]).show();
           $(".close").click((e) => {
             $(".modal").hide();
