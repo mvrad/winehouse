@@ -148,9 +148,9 @@ $(() => {
     $(".collection-main").on("click", ".wine-note", (e) => {
       $.each(modalDiv, (i) => {
         if (e.currentTarget.id === modalDiv[i].id) {
-          $(".modal").html(modalDiv[i]).show();
+          $(".modal").show();
           $(".close").click((e) => {
-            $(".modal").html(modalWindow).hide();
+            $(".modal").hide();
           });
           $(document).on("click", "#save-btn", () => {
             $("#notes").replaceWith("<div class=notes-content>" + $("#notes").val() + "</div>");
