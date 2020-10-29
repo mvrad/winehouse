@@ -146,20 +146,22 @@ $(() => {
     // Modal window
     let modalDiv = $(".modal-content");
     $(".collection-main").on("click", ".wine-note", (e) => {
-      e.PreventDefault;
-      let grabID = $(this).id;
-      $(".modal" + grabID).show();
-      $(".modal").not("modal" + grabID).hide();
-      $(".close").click((e) => {
-        $(".modal").hide();
-      });
-      $(document).on("click", "#save-btn", () => {
-        $("#notes").replaceWith("<div class=notes-content>" + $("#notes").val() + "</div>");
-        $("#save-btn").replaceWith("<button id=edit-btn>Edit</button>");
-      });
-      $(document).on("click", "#edit-btn", () => {
-        $(".notes-content").replaceWith("<textarea id=notes></textarea>");
-        $("#edit-btn").replaceWith("<button id=save-btn>Save</button>");
+      console.log(e.currentTarget.id);
+      $.each(modalDiv, (i) => {
+        if (e.currentTarget.id === modalDiv[i].id) {
+          $(".modal").html(modalDiv[i]).show();
+          $(".close").click((e) => {
+            $(".modal").hide();
+          });
+          $(document).on("click", "#save-btn", () => {
+            $("#notes").replaceWith("<div class=notes-content>" + $("#notes").val() + "</div>");
+            $("#save-btn").replaceWith("<button id=edit-btn>Edit</button>");
+          });
+          $(document).on("click", "#edit-btn", () => {
+            $(".notes-content").replaceWith("<textarea id=notes></textarea>");
+            $("#edit-btn").replaceWith("<button id=save-btn>Save</button>");
+          });
+        }
       });
     }); // End modal window
   }); // End on click event
