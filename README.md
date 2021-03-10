@@ -15,7 +15,7 @@
     <img src="https://circleci.com/gh/mvrad/wine-house.svg?style=shield" alt="Current CircleCI build status.">
   </a>
   <a href="https://securityheaders.io/?q=https://winoapp.herokuapp.com&hide=on&followRedirects=on">
-    <img src="https://img.shields.io/security-headers?url=https%3A%2F%2winoapp.herokuapp.com" alt="Security Header Grade">
+    <img src="https://img.shields.io/security-headers?url=https%3A%2F%2Fwinoapp.herokuapp.com" alt="Security Header Grade">
   </a>
 </p>
 
